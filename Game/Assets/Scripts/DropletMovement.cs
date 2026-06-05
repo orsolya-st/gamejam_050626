@@ -2,27 +2,38 @@ using UnityEngine;
 
 public class DropletMovement : MonoBehaviour
 {
-
-    public float moveSpeed = 5f;
-
     private Rigidbody2D rb;
+    public float moveSpeed = 5f;
+    public float jumpingPower = 5f;
     private Vector2 movement;
+    private Animator playerAnim; //for animation
+    private float xInput;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    //helper variables
+    private bool isGrounded = true;
+    [SerializeField] private float dashSpeed;
+    [SerializeField] private float dashDuration;
+    private float dashTime;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+
+
+
+        if (isGrounded && Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
+        }
     }
 
     private void FixedUpdate()
     {
-        rb.linearVelocity = movement.normalized * moveSpeed;
+        rb.linearVelocity = new Vector2(movement.x * moveSpeed, rb.linearVelocity.y);
     }
 }
