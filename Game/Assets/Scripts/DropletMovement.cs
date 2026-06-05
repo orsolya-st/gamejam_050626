@@ -10,7 +10,7 @@ public class DropletMovement : MonoBehaviour
     private float xInput;
 
     //helper variables
-    private bool isGrounded;
+    private bool isGrounded = true;
     [SerializeField] private float dashSpeed;
     [SerializeField] private float dashDuration;
     private float dashTime;
@@ -23,6 +23,8 @@ public class DropletMovement : MonoBehaviour
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
+
+
 
         if (isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
