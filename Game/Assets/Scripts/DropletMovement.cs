@@ -9,10 +9,11 @@ public class DropletMovement : MonoBehaviour
     private Animator playerAnim; //for animation
     private float xInput;
 
-    public float moveSpeed = 5f;
-    public float jumpingPower = 5f;
-
-    private Vector2 movement;
+    //helper variables
+    private bool isGrounded = true;
+    [SerializeField] private float dashSpeed;
+    [SerializeField] private float dashDuration;
+    private float dashTime;
 
     void Start()
     {
@@ -22,6 +23,8 @@ public class DropletMovement : MonoBehaviour
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
+
+
 
         if (isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
