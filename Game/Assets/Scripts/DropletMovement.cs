@@ -72,7 +72,7 @@ public class DropletMovement : MonoBehaviour
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0f;
 
-        rb.linearVelocity = new Vector2(transform.localScale.x * dashingPower, 0f);
+        rb.linearVelocity = new Vector2(facingDirection * dashingPower, 0f);
 
         if (tr != null)
         {
