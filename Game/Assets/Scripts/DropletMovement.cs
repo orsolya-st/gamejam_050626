@@ -3,11 +3,16 @@ using UnityEngine;
 public class DropletMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
-
     public float moveSpeed = 5f;
-    public float jumpingPower = 5f;
-
     private Vector2 movement;
+    private Animator playerAnim; //for animation
+    private float xInput;
+
+    //helper variables
+    private bool isGrounded;
+    [SerializeField] private float dashSpeed;
+    [SerializeField] private float dashDuration;
+    private float dashTime;
 
     private Animator playerAnim;
     private float xInput;
