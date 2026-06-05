@@ -3,16 +3,28 @@ using UnityEngine;
 public class DropletMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
-    public float moveSpeed = 5f;
-    private Vector2 movement;
-    private Animator playerAnim; //for animation
-    private float xInput;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private LayerMask groundLayer;
 
-    //helper variables
+    // movement
+    [Header("Movement")]
+    private Vector2 movement;
+    private float horizontal;
+    private bool isFacingRight = true;
+    public float moveSpeed = 5f;
+    public float jumpingPower = 16f;
+
+    // dashing
+    [Header("dashing")]
     private bool isGrounded;
-    [SerializeField] private float dashSpeed;
-    [SerializeField] private float dashDuration;
-    private float dashTime;
+    private bool isDashing;
+    public float dashingPower = 24f;
+    public float dashingTime = 0.2f;
+    public float dashingCooldown = 1f;
+
+    //animation
+    private Animator playerAnim;
+    private float xInput;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,6 +37,8 @@ public class DropletMovement : MonoBehaviour
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+
+        //------------dashing------------
     }
 
     private void FixedUpdate()
