@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class DamageHandler : MonoBehaviour
 {
-	public 
+	public float threshold = 0.05f;
+
+	public float multiplier = 5f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
