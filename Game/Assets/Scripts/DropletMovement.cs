@@ -5,15 +5,18 @@ public class DropletMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
 
+    // helper variables
+    private bool isGrounded = true;
+    private float facingDirection = 1f;
+
+    // movement
+    private Vector2 movement;
     public float jumpingPower = 5f;
     public float moveSpeed = 5f;
 
-    private Vector2 movement;
-    private bool isGrounded = true;
-
+    // dashing
     private bool canDash = true;
     private bool isDashing;
-
     public float dashingPower = 24f;
     public float dashingTime = 0.2f;
     public float dashingCooldown = 1f;
@@ -33,6 +36,9 @@ public class DropletMovement : MonoBehaviour
         }
 
         movement.x = Input.GetAxisRaw("Horizontal");
+
+        if (movement.x < 0) facingDirection = -1;
+        if (movement.x > 0) facingDirection = 1;
 
         if (isGrounded &&
             (Input.GetKeyDown(KeyCode.Space) ||
@@ -86,5 +92,15 @@ public class DropletMovement : MonoBehaviour
         yield return new WaitForSeconds(dashingCooldown);
 
         canDash = true;
+    }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        isGrounded = true;
+    }
+
+    private void OnCollisionExit2D(Collision2D col)
+    {
+        isGrounded = false;
     }
 }
