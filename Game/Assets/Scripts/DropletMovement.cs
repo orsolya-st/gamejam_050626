@@ -2,11 +2,17 @@ using UnityEngine;
 
 public class DropletMovement : MonoBehaviour
 {
-
-    public float moveSpeed = 5f;
-
     private Rigidbody2D rb;
+    public float moveSpeed = 5f;
     private Vector2 movement;
+    private Animator playerAnim; //for animation
+    private float xInput;
+
+    //helper variables
+    private bool isGrounded;
+    [SerializeField] private float dashSpeed;
+    [SerializeField] private float dashDuration;
+    private float dashTime;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
