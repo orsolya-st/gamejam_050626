@@ -3,14 +3,11 @@ using UnityEngine;
 public class DropletMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
-<<<<<<< HEAD
-=======
     public float moveSpeed = 5f;
     public float jumpingPower = 5f;
     private Vector2 movement;
     private Animator playerAnim; //for animation
     private float xInput;
->>>>>>> 3a4d5de (current correct code inshallah)
 
     public float moveSpeed = 5f;
     public float jumpingPower = 5f;
