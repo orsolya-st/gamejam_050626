@@ -109,9 +109,18 @@ public class DropletMovement : MonoBehaviour
         if (isDashing || isDropping)
     {
         return;
-    }
+        } // was here before
 
-        rb.linearVelocity = new Vector2(movement.x * moveSpeed, rb.linearVelocity.y);
+        float windForce = 0f;
+
+        if (WindManager.Instance != null)
+        {
+            windForce = WindManager.Instance.CurrentWindForce;
+        }
+
+        rb.linearVelocity = new Vector2(movement.x * moveSpeed + windForce, rb.linearVelocity.y);
+
+        //used to be rb.linearVelocity = new Vector2(movement.x * moveSpeed, rb.linearVelocity.y);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
