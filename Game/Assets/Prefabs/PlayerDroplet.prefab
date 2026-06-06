@@ -122,7 +122,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &218454750066863599
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64d83d81ffe9aeb419af4eb171357948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropletMovement
-  jumpingPower: 6
+  jumpingPower: 7
   moveSpeed: 5
   dashingPower: 24
   dashingTime: 0.2
