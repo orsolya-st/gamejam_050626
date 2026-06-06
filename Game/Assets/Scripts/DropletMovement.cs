@@ -40,7 +40,7 @@ public class DropletMovement : MonoBehaviour
     {
         
         //dashing
-        if (isDashing || isGrounded == false)
+        if (isDashing)
         {
             return;
         }
@@ -149,7 +149,7 @@ public class DropletMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {   
-        if (col.collider.CompareTag("Platform") && rb.linearVelocity.y == 0)
+        if (col.collider.CompareTag("Platform"))
         {
             isGrounded = true;
         }
