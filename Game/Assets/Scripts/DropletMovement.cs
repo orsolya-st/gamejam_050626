@@ -83,7 +83,6 @@ public class DropletMovement : MonoBehaviour
         if (!isGrounded){return;}
         if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
         {
-          
             DropDown();
         }
 
