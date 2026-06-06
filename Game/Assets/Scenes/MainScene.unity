@@ -573,9 +573,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8535381027169538, guid: d56297e435f8410a584581d73d99d2e4, type: 3}
+      propertyPath: jumpingPower
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 2141180002423843430, guid: d56297e435f8410a584581d73d99d2e4, type: 3}
       propertyPath: m_Name
       value: PlayerDroplet
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266476263824402640, guid: d56297e435f8410a584581d73d99d2e4, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266476263824402640, guid: d56297e435f8410a584581d73d99d2e4, type: 3}
+      propertyPath: m_GravityScale
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 6566899495513628888, guid: d56297e435f8410a584581d73d99d2e4, type: 3}
       propertyPath: m_LocalPosition.x
