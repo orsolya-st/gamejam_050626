@@ -43,7 +43,8 @@ public class DropletMovement : MonoBehaviour
         if (isGrounded &&
             (Input.GetKeyDown(KeyCode.Space) ||
              Input.GetKeyDown(KeyCode.UpArrow) ||
-             Input.GetKeyDown(KeyCode.W)))
+             Input.GetKeyDown(KeyCode.W))
+             && !isDropping)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
         }
@@ -143,7 +144,5 @@ public class DropletMovement : MonoBehaviour
         rb.gravityScale = 1;
         playerCollider.isTrigger = false;
         isDropping = false;
->>>>>>> origin/main
-
     }
 }
