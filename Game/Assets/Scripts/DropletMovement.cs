@@ -140,5 +140,6 @@ public class DropletMovement : MonoBehaviour
         rb.gravityScale = 1;
         playerCollider.isTrigger = false;
         isDropping = false;
+        isGrounded = false;
     }
 }
