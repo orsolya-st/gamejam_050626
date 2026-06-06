@@ -8,6 +8,7 @@ public class DropletMovement : MonoBehaviour
     // helper variables
     private bool isGrounded = true;
     private float facingDirection = 1f;
+    private bool isDropping = false;
 
     // movement
     private Vector2 movement;
@@ -42,7 +43,8 @@ public class DropletMovement : MonoBehaviour
         if (isGrounded &&
             (Input.GetKeyDown(KeyCode.Space) ||
              Input.GetKeyDown(KeyCode.UpArrow) ||
-             Input.GetKeyDown(KeyCode.W)))
+             Input.GetKeyDown(KeyCode.W))
+             && !isDropping)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
         }
@@ -62,10 +64,10 @@ public class DropletMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isDashing)
-        {
-            return;
-        }
+        if (isDashing || isDropping)
+    {
+        return;
+    }
 
         rb.linearVelocity = new Vector2(movement.x * moveSpeed, rb.linearVelocity.y);
     }
@@ -125,6 +127,7 @@ public class DropletMovement : MonoBehaviour
     private IEnumerator DropRoutine()
     {
         Collider2D playerCollider = GetComponent<Collider2D>();
+        rb = GetComponent<Rigidbody2D>();
 
         playerCollider.isTrigger = true;
             
@@ -137,12 +140,17 @@ public class DropletMovement : MonoBehaviour
 
         while (elapsed < duration)
         {
+            isDropping = true;
+            rb.gravityScale = 0;
             transform.Translate(Vector3.down * speed * Time.deltaTime);
             elapsed += Time.deltaTime; //update time
             yield return null;
         }
 
         //enable collider --> not a trigger anymore
+        rb.gravityScale = 1;
         playerCollider.isTrigger = false;
+        isDropping = false;
+        isGrounded = false;
     }
 }
