@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class DropletMovement : MonoBehaviour
 {
@@ -86,9 +87,18 @@ public class DropletMovement : MonoBehaviour
         if (isDashing || isDropping)
     {
         return;
-    }
+        } // was here before
 
-        rb.linearVelocity = new Vector2(movement.x * moveSpeed, rb.linearVelocity.y);
+        float windForce = 0f;
+
+        if (WindManager.Instance != null)
+        {
+            windForce = WindManager.Instance.CurrentWindForce;
+        }
+
+        rb.linearVelocity = new Vector2(movement.x * moveSpeed + windForce, rb.linearVelocity.y);
+
+        //used to be rb.linearVelocity = new Vector2(movement.x * moveSpeed, rb.linearVelocity.y);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -97,6 +107,7 @@ public class DropletMovement : MonoBehaviour
         //Hole
         if (other.CompareTag("Hole"))
         {
+            SceneManager.LoadScene(2, LoadSceneMode.Single);
             Destroy(gameObject);
             Debug.Log("Fell in hole!");
         }
@@ -138,10 +149,6 @@ public class DropletMovement : MonoBehaviour
         isGrounded = true;
     }
 
-    private void OnCollisionExit2D(Collision2D col)
-    {
-        isGrounded = false;
-    }
 
     private void DropDown()
     {
