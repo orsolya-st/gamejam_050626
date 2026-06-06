@@ -4347,7 +4347,6 @@ GameObject:
   - component: {fileID: 750131492}
   - component: {fileID: 750131491}
   - component: {fileID: 750131493}
-  - component: {fileID: 750131494}
   m_Layer: 0
   m_Name: CinemachineCamera
   m_TagString: Untagged
@@ -4433,18 +4432,6 @@ MonoBehaviour:
     RotationDamping: {x: 0, y: 0, z: 0}
     QuaternionDamping: 1
   FollowOffset: {x: 0, y: 0, z: -10}
---- !u!114 &750131494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 750131489}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0a87a1c7758eb34587daa15a89d59d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DownwardCamera
 --- !u!1001 &751558359
 PrefabInstance:
   m_ObjectHideFlags: 0
