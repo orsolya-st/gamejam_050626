@@ -10,7 +10,7 @@ public class TreeSpawner : MonoBehaviour
     void Update()
     {
 
-        Debug.Log("TreeSpawner running");
+        // Debug.Log("TreeSpawner running");
 
         if (hasSpawned) return;
 
