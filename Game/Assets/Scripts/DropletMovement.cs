@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class DropletMovement : MonoBehaviour
 {
@@ -97,7 +98,8 @@ public class DropletMovement : MonoBehaviour
         //Hole
         if (other.CompareTag("Hole"))
         {
-            //Destroy(gameObject);
+            SceneManager.LoadScene(2, LoadSceneMode.Single);
+            Destroy(gameObject);
             Debug.Log("Fell in hole!");
         }
 

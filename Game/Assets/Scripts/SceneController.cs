@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 public class SceneController : MonoBehaviour
 {
@@ -9,6 +9,7 @@ public class SceneController : MonoBehaviour
     private void OggerEnter2D(Collider2D collision)
     {
         Debug.Log("Hole");
-        SceneManager.LoadScene(sceneIndex, LoadSceneMode.Single);
+        // Destroy(collision.gameObject);
+        
     }
 }
