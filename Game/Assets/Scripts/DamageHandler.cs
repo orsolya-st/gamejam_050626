@@ -16,9 +16,9 @@ public class DamageHandler : MonoBehaviour
 	{
 		 threshold = 2.5f;
 		 multiplier = 0.5f;
-
+	
 		 maxHealth = 1f;
-		 minSize = 0.4f;
+		 minSize = 0.8f;
 		health = maxHealth;
 	}
 

@@ -397,8 +397,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b3b9fc97a2d39d2d84c4be43a79247a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageHandler
-  threshold: 0.05
-  multiplier: 5
+  threshold: 2.5
+  multiplier: 0.5
   maxHealth: 1
   health: 0
   minSize: 0.4
@@ -623,6 +623,10 @@ PrefabInstance:
     - target: {fileID: 6566899495513628888, guid: d56297e435f8410a584581d73d99d2e4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6566899495513628888, guid: d56297e435f8410a584581d73d99d2e4, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8298564220872302505, guid: d56297e435f8410a584581d73d99d2e4, type: 3}
       propertyPath: m_SortingLayer
@@ -947,6 +951,10 @@ PrefabInstance:
     - target: {fileID: 2163867978973577705, guid: 2f44dc6d6adb9ae7f9b4f644da0e3485, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6893150318335556705, guid: 2f44dc6d6adb9ae7f9b4f644da0e3485, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8871780616060845038, guid: 2f44dc6d6adb9ae7f9b4f644da0e3485, type: 3}
       propertyPath: m_Name
