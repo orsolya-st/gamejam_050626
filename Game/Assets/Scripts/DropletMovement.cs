@@ -55,6 +55,13 @@ public class DropletMovement : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
         }
+        if (rb.linearVelocityY > 2)
+        {
+            animator.SetBool("Jumping", true);
+        } else if (rb.linearVelocityY < 2)
+        {
+            animator.SetBool("Jumping", false);
+        }
         if (movement.x > 0) {
             animator.SetBool("WalkingRight", true);
             animator.SetBool("WalkingLeft", false);
