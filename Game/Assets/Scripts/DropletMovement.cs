@@ -4,11 +4,16 @@ using System.Collections;
 public class DropletMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private Collider2D characterCollider;
 
     // helper variables
     private bool isGrounded = true;
     private float facingDirection = 1f;
     private bool isDropping = false;
+    private float fallAngleThreshold = -45f;
+    private float fallTimer;
+    private bool isFalling;
+    public float maxFallTime = 0.5f;
 
     // movement
     private Vector2 movement;
@@ -30,11 +35,30 @@ public class DropletMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+    [System.Obsolete]
     void Update()
     {
 
-        //collision
+        //reset falltimer when start the jump
+        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && isGrounded)
+        {
+            fallTimer = 0f; //jump resets falltime
+        }
 
+        //fall damage
+        if (isGrounded && fallTimer > 0.6f)
+        {
+            Destroy(gameObject); //TODO
+        }
+
+        //handle jump/midair variables
+        if (isGrounded)
+        {
+            isFalling = false;
+        } else
+        {
+            HandleMidairLogic();
+        }
         
         //dashing
         if (isDashing)
@@ -94,6 +118,29 @@ public class DropletMovement : MonoBehaviour
         {
             Destroy(gameObject); //for now it destroys the droplet
             Debug.Log("Droplet dropped down, animation, game end!");
+        }
+    }
+
+    [System.Obsolete]
+    private void HandleMidairLogic()
+    {
+        if (rb.linearVelocity.y >= 0)
+        {
+            isFalling = false;
+            fallTimer = 0f;
+            return;
+        }
+        
+        float movementAngle = Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg;
+        //Degrees: 0 - right, 90 - up, -90 - down --> downwards is beteen -90 and -180
+        //Standard treshhold (degree) = -45 --> between -45 and -135 degrees is falling (instead of jumping)
+        bool fallingDown = (movementAngle < fallAngleThreshold && movementAngle > (-180f - fallAngleThreshold));
+
+        if (fallingDown || rb.velocity.x == 0)
+        {
+            isFalling = true;
+            fallTimer += Time.deltaTime;
+            Debug.Log($"Fall time: {fallTimer:F2} seconds");
         }
     }
 
