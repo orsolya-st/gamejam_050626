@@ -30,6 +30,8 @@ public class DropletMovement : MonoBehaviour
 
     [SerializeField] private TrailRenderer tr;
     [SerializeField] private Animator animator;
+    [SerializeField] private float fallingAnimationVelocityThreshold = 3f;
+
 
     void Start()
     {
@@ -64,13 +66,13 @@ public class DropletMovement : MonoBehaviour
 
         //Jump animation
         
-        if (rb.linearVelocityY < -3f && !isGrounded)
-        {
-            animator.SetBool("Falling", true);
-        } else
-        {
-            animator.SetBool("Falling", false);
-        }
+        // if (rb.linearVelocityY < fallingAnimationVelocityThreshold && !isGrounded)
+        // {
+        //     animator.SetBool("Falling", true);
+        // } else
+        // {
+        //     animator.SetBool("Falling", false);
+        // }
 
         //Walk animation
         if (movement.x > 0) {

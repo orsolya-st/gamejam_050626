@@ -3097,12 +3097,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b3b9fc97a2d39d2d84c4be43a79247a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageHandler
-  threshold: 2.5
-  multiplier: 0.5
+  threshold: 15
+  multiplier: 0.1
   maxHealth: 1
   health: 0
   minSize: 0.4
   maxFallingTime: 2
+  fallingAnimTreshold: 0.2
 --- !u!1001 &703703567
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5970,6 +5971,10 @@ PrefabInstance:
     - target: {fileID: -8535381027169538, guid: d56297e435f8410a584581d73d99d2e4, type: 3}
       propertyPath: jumpingPower
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -8535381027169538, guid: d56297e435f8410a584581d73d99d2e4, type: 3}
+      propertyPath: fallingAnimationVelocityThreshold
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2141180002423843430, guid: d56297e435f8410a584581d73d99d2e4, type: 3}
       propertyPath: m_Name

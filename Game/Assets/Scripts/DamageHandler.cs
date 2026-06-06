@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class DamageHandler : MonoBehaviour
 {
 	private Rigidbody2D rb;
+	private Animator animator;
 	public float threshold = 2.5f;
 	public float multiplier = 0.5f;
 
@@ -17,20 +18,17 @@ public class DamageHandler : MonoBehaviour
 	private bool falling;
 	private float fallTime;
 	public float maxFallingTime = 2f;
+	public float fallingAnimTreshold = 0.5f;
 
 
 	private void Awake()
 	{
 		rb = GetComponent<Rigidbody2D>();
+		animator = GetComponent<Animator>();
 	}
 
 	private void Start()
 	{
-		threshold = 10f;
-		multiplier = 0.1f;
-	
-		maxHealth = 1f;
-		minSize = 0.8f;
 		health = maxHealth;
 	}
 
@@ -56,6 +54,18 @@ public class DamageHandler : MonoBehaviour
 			falling = false;
 		}
 		lastYVelocity = currentVelocity;
+	}
+
+	private void Update()
+	{
+		if (falling && fallTime >= fallingAnimTreshold)
+		{
+			animator.SetBool("Falling",true);
+		}
+		else
+		{
+			animator.SetBool("Falling",false);
+		}
 	}
 
 	private void OnCollisionEnter2D(Collision2D other)
