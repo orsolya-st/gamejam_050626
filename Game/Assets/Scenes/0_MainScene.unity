@@ -890,6 +890,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6893150318335556705, guid: 2f44dc6d6adb9ae7f9b4f644da0e3485, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6893150318335556705, guid: 2f44dc6d6adb9ae7f9b4f644da0e3485, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -925020913
+      objectReference: {fileID: 0}
     - target: {fileID: 8871780616060845038, guid: 2f44dc6d6adb9ae7f9b4f644da0e3485, type: 3}
       propertyPath: m_Name
       value: Branch
@@ -953,8 +961,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6893150318335556705, guid: 2f44dc6d6adb9ae7f9b4f644da0e3485, type: 3}
-      propertyPath: m_SortingOrder
+      propertyPath: m_SortingLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6893150318335556705, guid: 2f44dc6d6adb9ae7f9b4f644da0e3485, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6893150318335556705, guid: 2f44dc6d6adb9ae7f9b4f644da0e3485, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -925020913
       objectReference: {fileID: 0}
     - target: {fileID: 8871780616060845038, guid: 2f44dc6d6adb9ae7f9b4f644da0e3485, type: 3}
       propertyPath: m_Name
