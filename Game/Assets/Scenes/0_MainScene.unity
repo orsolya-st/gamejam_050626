@@ -1369,6 +1369,7 @@ MonoBehaviour:
   maxHealth: 1
   health: 0
   minSize: 0.4
+  maxFallingTime: 2
 --- !u!4 &734000361 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2163867978973577705, guid: 2f44dc6d6adb9ae7f9b4f644da0e3485, type: 3}

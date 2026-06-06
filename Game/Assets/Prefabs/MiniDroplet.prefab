@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -5149642109756610618}
   - component: {fileID: -2336659794279196015}
   - component: {fileID: 2584361954247496812}
+  - component: {fileID: 8211840801622381919}
   m_Layer: 0
   m_Name: MiniDroplet
   m_TagString: Untagged
@@ -168,3 +169,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8211840801622381919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3724115605263402928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e4bdf7e79782084cae014769845a30a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MiniDroplet
