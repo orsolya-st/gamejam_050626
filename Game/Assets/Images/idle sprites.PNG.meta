@@ -1,5 +1,6 @@
 fileFormatVersion: 2
 guid: 538f90e730a0f7546ab3734b86c40ba9
+guid: 640e946956ffb084c8d0f325a978f7be
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -132,6 +133,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -145,6 +159,11 @@ TextureImporter:
         height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+        y: 729
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -167,6 +186,12 @@ TextureImporter:
         height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+        x: 11
+        y: 700
+        width: 156
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -189,6 +214,12 @@ TextureImporter:
         height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+        x: 182
+        y: 702
+        width: 155
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -211,6 +242,12 @@ TextureImporter:
         height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+        x: 343
+        y: 702
+        width: 155
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -233,6 +270,12 @@ TextureImporter:
         height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+        x: 506
+        y: 702
+        width: 163
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -255,6 +298,12 @@ TextureImporter:
         height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+        x: 674
+        y: 699
+        width: 168
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -277,6 +326,12 @@ TextureImporter:
         height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+        x: 852
+        y: 699
+        width: 177
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -299,6 +354,12 @@ TextureImporter:
         height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+        x: 1045
+        y: 704
+        width: 182
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -321,6 +382,12 @@ TextureImporter:
         height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+        x: 1241
+        y: 706
+        width: 176
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -343,6 +410,12 @@ TextureImporter:
         height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+        x: 1427
+        y: 703
+        width: 163
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -365,6 +438,12 @@ TextureImporter:
         height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+        x: 1596
+        y: 706
+        width: 154
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -377,11 +456,56 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: idle sprites_11
+      rect:
+        serializedVersion: 2
+        x: 1751
+        y: 728
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52db9cfcc8d8672c0800000000000000
+      internalID: -4434201147178631899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle sprites_12
+      rect:
+        serializedVersion: 2
+        x: 1763
+        y: 699
+        width: 156
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1528d6cfe630f4720800000000000000
+      internalID: 2832486465855652433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
     spriteID: 26189bb86b37500408da1f12c9a366d4
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -392,10 +516,13 @@ TextureImporter:
       entries:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":11.0,"y":1.0},"gridSpriteSize":{"x":174.0,"y":1080.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
       idle sprites_0: -5254763888643210246
       idle sprites_1: 6308160273899767728
       idle sprites_10: -2803174831038805257
+      idle sprites_11: -4434201147178631899
+      idle sprites_12: 2832486465855652433
       idle sprites_2: -8810144250521748931
       idle sprites_3: 8716055518302679110
       idle sprites_4: -2831101797488401219
