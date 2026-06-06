@@ -38,7 +38,6 @@ public class DropletMovement : MonoBehaviour
         TreeSpawner.treeCount = 0;
     }
 
-    [System.Obsolete]
     void Update()
     {
         if (isDashing || isDropping)
@@ -63,7 +62,7 @@ public class DropletMovement : MonoBehaviour
 
         //Jump animation
         
-        if (rb.linearVelocityY < -0.5 && !isGrounded)
+        if (rb.linearVelocityY < -1f && !isGrounded)
         {
             animator.SetBool("Falling", true);
         } else
