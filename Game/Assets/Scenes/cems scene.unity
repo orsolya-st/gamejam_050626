@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 218454750066863599, guid: d56297e435f8410a584581d73d99d2e4, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 2141180002423843430, guid: d56297e435f8410a584581d73d99d2e4, type: 3}
       propertyPath: m_Name
       value: PlayerDroplet
