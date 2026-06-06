@@ -8,6 +8,7 @@ public class DropletMovement : MonoBehaviour
     // helper variables
     private bool isGrounded = true;
     private float facingDirection = 1f;
+    private bool isDropping = false;
 
     // movement
     private Vector2 movement;
@@ -62,10 +63,10 @@ public class DropletMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isDashing)
-        {
-            return;
-        }
+        if (isDashing || isDropping)
+    {
+        return;
+    }
 
         rb.linearVelocity = new Vector2(movement.x * moveSpeed, rb.linearVelocity.y);
     }
@@ -138,6 +139,7 @@ public class DropletMovement : MonoBehaviour
 
         while (elapsed < duration)
         {
+            isDropping = true;
             rb.gravityScale = 0;
             transform.Translate(Vector3.down * speed * Time.deltaTime);
             elapsed += Time.deltaTime; //update time
@@ -147,6 +149,7 @@ public class DropletMovement : MonoBehaviour
         //enable collider --> not a trigger anymore
         rb.gravityScale = 1;
         playerCollider.isTrigger = false;
+        isDropping = false;
 
     }
 }
