@@ -265,6 +265,54 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bb8206709807ff4cae9583b3ee3e67d, type: 3}
+--- !u!1 &83055492
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 83055494}
+  - component: {fileID: 83055493}
+  m_Layer: 0
+  m_Name: WindHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &83055493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83055492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77a372e261eab9a4b9b6cf05e6c6e576, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WindManager
+  windStrength: 2
+  windDuration: 5
+  minTimeBetweenWind: 5
+  maxTimeBetweenWind: 20
+--- !u!4 &83055494
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83055492}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.92175, y: 7.26547, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &153222217 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 833263204665589715, guid: 0df5ee43ace2acc4f90f9681570465d1, type: 3}
@@ -2516,3 +2564,4 @@ SceneRoots:
   - {fileID: 1681788161}
   - {fileID: 1445156949}
   - {fileID: 750131492}
+  - {fileID: 83055494}
