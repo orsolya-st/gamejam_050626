@@ -466,6 +466,7 @@ MonoBehaviour:
     RotationDamping: {x: 0, y: 0, z: 0}
     QuaternionDamping: 1
   FollowOffset: {x: 0, y: 0, z: -10}
+<<<<<<< Updated upstream
 --- !u!1001 &945103274
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -523,6 +524,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2104fa77ddd078b48b1f646a4be3ccf8, type: 3}
+=======
+>>>>>>> Stashed changes
 --- !u!4 &1124127124 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2163867978973577705, guid: 2f44dc6d6adb9ae7f9b4f644da0e3485, type: 3}
@@ -942,7 +945,11 @@ Transform:
   - {fileID: 1710653547}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
 --- !u!1001 &4353227734250816225
+=======
+--- !u!1001 &7081990975111999383
+>>>>>>> Stashed changes
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -950,6 +957,7 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< Updated upstream
     - target: {fileID: 7890225293042883908, guid: 09646d5b25a07904aa2ddf7399b3b075, type: 3}
       propertyPath: m_Name
       value: LeaveObstacle
@@ -994,11 +1002,61 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+=======
+    - target: {fileID: 175643639083584954, guid: cf4c8550450b2534a972d91ba9523ae3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.7504
+      objectReference: {fileID: 0}
+    - target: {fileID: 175643639083584954, guid: cf4c8550450b2534a972d91ba9523ae3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.498
+      objectReference: {fileID: 0}
+    - target: {fileID: 175643639083584954, guid: cf4c8550450b2534a972d91ba9523ae3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 175643639083584954, guid: cf4c8550450b2534a972d91ba9523ae3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 175643639083584954, guid: cf4c8550450b2534a972d91ba9523ae3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 175643639083584954, guid: cf4c8550450b2534a972d91ba9523ae3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 175643639083584954, guid: cf4c8550450b2534a972d91ba9523ae3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 175643639083584954, guid: cf4c8550450b2534a972d91ba9523ae3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 175643639083584954, guid: cf4c8550450b2534a972d91ba9523ae3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 175643639083584954, guid: cf4c8550450b2534a972d91ba9523ae3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5606886376021723540, guid: cf4c8550450b2534a972d91ba9523ae3, type: 3}
+      propertyPath: m_Name
+      value: Hole2
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
+<<<<<<< Updated upstream
   m_SourcePrefab: {fileID: 100100000, guid: 09646d5b25a07904aa2ddf7399b3b075, type: 3}
+=======
+  m_SourcePrefab: {fileID: 100100000, guid: cf4c8550450b2534a972d91ba9523ae3, type: 3}
+>>>>>>> Stashed changes
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1008,5 +1066,9 @@ SceneRoots:
   - {fileID: 2072448676}
   - {fileID: 1445156949}
   - {fileID: 750131492}
+<<<<<<< Updated upstream
   - {fileID: 945103274}
   - {fileID: 4353227734250816225}
+=======
+  - {fileID: 7081990975111999383}
+>>>>>>> Stashed changes
