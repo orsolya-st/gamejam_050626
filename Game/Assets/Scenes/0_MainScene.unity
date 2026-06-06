@@ -4146,6 +4146,8 @@ MonoBehaviour:
   minSize: 0.4
   maxFallingTime: 2
   fallingAnimTreshold: 0.2
+  speaker: {fileID: 0}
+  fallsound: {fileID: 0}
 --- !u!1001 &687478031
 PrefabInstance:
   m_ObjectHideFlags: 0
