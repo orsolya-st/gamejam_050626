@@ -97,6 +97,7 @@ public class DropletMovement : MonoBehaviour
         if (!isGrounded){return;}
         if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
         {
+          
             DropDown();
         }
 
@@ -200,8 +201,12 @@ public class DropletMovement : MonoBehaviour
 
         if (isGrounded && (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)))
         {
+            animator.SetBool("Dropping", true);
+            animator.SetBool("WalkingRight", false);
+            animator.SetBool("WalkingLeft", false);
             StartCoroutine(DropRoutine());
         }
+        
     }
 
     private IEnumerator DropRoutine()
@@ -232,5 +237,6 @@ public class DropletMovement : MonoBehaviour
         playerCollider.isTrigger = false;
         isDropping = false;
         isGrounded = false;
+        animator.SetBool("Dropping", false);
     }
 }

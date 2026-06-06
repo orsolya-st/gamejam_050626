@@ -1,0 +1,416 @@
+fileFormatVersion: 2
+guid: 0dbed7c6bfebbbf4e9ef9b8a0c509359
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1693947562976584006
+    second: drop down_0
+  - first:
+      213: 4647063366316319478
+    second: drop down_1
+  - first:
+      213: 3661698911924640465
+    second: drop down_2
+  - first:
+      213: -8335023682811112812
+    second: drop down_3
+  - first:
+      213: -3622804229256288518
+    second: drop down_4
+  - first:
+      213: 7743985285511160238
+    second: drop down_5
+  - first:
+      213: 7742456258712309561
+    second: drop down_6
+  - first:
+      213: -7358445219900629428
+    second: drop down_7
+  - first:
+      213: 6879999240475031715
+    second: drop down_8
+  - first:
+      213: -401902748771934166
+    second: drop down_9
+  - first:
+      213: 8192290844968782505
+    second: drop down_10
+  - first:
+      213: -7765996919172209082
+    second: drop down_11
+  - first:
+      213: 7548467791387054874
+    second: drop down_12
+  - first:
+      213: -2796635709170994973
+    second: drop down_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: drop down_0
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 23
+        width: 181
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 641ab57655c128710800000000000000
+      internalID: 1693947562976584006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drop down_1
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 12
+        width: 144
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f2e30ea28fad7040800000000000000
+      internalID: 4647063366316319478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drop down_2
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 6
+        width: 139
+        height: 169
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dad3b782c7f0d230800000000000000
+      internalID: 3661698911924640465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drop down_4
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 38
+        width: 156
+        height: 104
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af665687fb639bdc0800000000000000
+      internalID: -3622804229256288518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drop down_6
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 22
+        width: 168
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93f0c8d22fab27b60800000000000000
+      internalID: 7742456258712309561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drop down_7
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 23
+        width: 183
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4ed6a82f0d81e990800000000000000
+      internalID: -7358445219900629428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drop down_9
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 10
+        width: 172
+        height: 99
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a20223154972c6af0800000000000000
+      internalID: -401902748771934166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drop down_10
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 20
+        width: 186
+        height: 91
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aa8c0f6e1dd0b170800000000000000
+      internalID: 8192290844968782505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drop down_11
+      rect:
+        serializedVersion: 2
+        x: 1813
+        y: 25
+        width: 185
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64666f1b2f2a93490800000000000000
+      internalID: -7765996919172209082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drop down_13
+      rect:
+        serializedVersion: 2
+        x: 2031
+        y: 26
+        width: 156
+        height: 104
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e0b0b4c3aa5039d0800000000000000
+      internalID: -2796635709170994973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drop down_14
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 7
+        width: 132
+        height: 169
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12f3bb02b257c734f9990713238395d9
+      internalID: 131576111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: f65211e97727b2447ab2b460e705b028
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      drop down_0: 1693947562976584006
+      drop down_1: 4647063366316319478
+      drop down_10: 8192290844968782505
+      drop down_11: -7765996919172209082
+      drop down_12: 7548467791387054874
+      drop down_13: -2796635709170994973
+      drop down_14: 131576111
+      drop down_2: 3661698911924640465
+      drop down_3: -8335023682811112812
+      drop down_4: -3622804229256288518
+      drop down_5: 7743985285511160238
+      drop down_6: 7742456258712309561
+      drop down_7: -7358445219900629428
+      drop down_8: 6879999240475031715
+      drop down_9: -401902748771934166
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
