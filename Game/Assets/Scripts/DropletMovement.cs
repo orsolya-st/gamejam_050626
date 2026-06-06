@@ -214,6 +214,7 @@ public class DropletMovement : MonoBehaviour
     {
         Collider2D playerCollider = GetComponent<Collider2D>();
         rb = GetComponent<Rigidbody2D>();
+        rb.linearVelocityX = 0;
 
         playerCollider.isTrigger = true;
             

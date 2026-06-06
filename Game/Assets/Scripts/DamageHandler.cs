@@ -4,8 +4,8 @@ using Object = System.Object;
 
 public class DamageHandler : MonoBehaviour
 {
-	public float threshold = 0.05f;
-	public float multiplier = 5f;
+	public float threshold = 2.5f;
+	public float multiplier = 0.5f;
 
 	public float maxHealth = 1f;
 	public float health;
