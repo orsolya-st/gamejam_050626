@@ -3097,8 +3097,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b3b9fc97a2d39d2d84c4be43a79247a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageHandler
-  threshold: 15
-  multiplier: 0.1
+  threshold: 10
+  multiplier: 0.05
   maxHealth: 1
   health: 0
   minSize: 0.4
