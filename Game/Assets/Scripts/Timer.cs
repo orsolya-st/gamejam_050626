@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class Timer : MonoBehaviour
     public float timeRemaining = 89f; // Give it a starting time!
     
     private bool timerIsRunning = false;
+
+    public GameObject targetObject;
 
     void Update()
     {
@@ -44,6 +47,12 @@ public class Timer : MonoBehaviour
                 DisplayTime(timeRemaining);
                 Debug.Log("Time's up!");
             }
+        }
+
+        if (timeRemaining <= 0)
+        {
+            SceneManager.LoadScene(4, LoadSceneMode.Single);
+            Destroy(targetObject);
         }
     }
 
