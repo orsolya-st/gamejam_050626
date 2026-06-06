@@ -40,7 +40,7 @@ public class DropletMovement : MonoBehaviour
     {
         
         //dashing
-        if (isDashing || isGrounded == false)
+        if (isDashing)
         {
             return;
         }
@@ -55,10 +55,10 @@ public class DropletMovement : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
         }
-        if (rb.linearVelocityY > 2)
+        if (rb.linearVelocityY > 1)
         {
             animator.SetBool("Jumping", true);
-        } else if (rb.linearVelocityY < 2)
+        } else if (rb.linearVelocityY < 1)
         {
             animator.SetBool("Jumping", false);
         }
@@ -149,7 +149,7 @@ public class DropletMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {   
-        if (col.collider.CompareTag("Platform") && rb.linearVelocity.y == 0)
+        if (col.collider.CompareTag("Platform"))
         {
             isGrounded = true;
         }
