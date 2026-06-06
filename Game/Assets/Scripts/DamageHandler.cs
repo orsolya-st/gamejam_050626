@@ -1,6 +1,5 @@
-using System;
+using System.Collections;
 using UnityEngine;
-using Object = System.Object;
 using UnityEngine.SceneManagement;
 
 public class DamageHandler : MonoBehaviour
@@ -60,6 +59,11 @@ public class DamageHandler : MonoBehaviour
 
 	private void OnCollisionEnter2D(Collision2D other)
 	{
+
+		if (other.collider.CompareTag("Minidrop")){
+			UpdateHealth(0.2f);
+		}
+		//on collision check fall damage
 		float fallSpeed = lastYVelocity;		
 		if (fallSpeed < -threshold)
 		{
@@ -70,8 +74,10 @@ public class DamageHandler : MonoBehaviour
 	
 
 	public void UpdateHealth(float health)
-	{
+	{	
 		this.health = health;
+		if (health > maxHealth) this.health = maxHealth;
+
 		Transform transform = GetComponent<Transform>();
 		float healthScaling = minSize + (1 - minSize) * (this.health / maxHealth);
 		//adjust size based on health
