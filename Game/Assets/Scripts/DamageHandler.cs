@@ -7,8 +7,8 @@ public class DamageHandler : MonoBehaviour
 {
 	private Rigidbody2D rb;
 	private Animator animator;
-	public float threshold = 2.5f;
-	public float multiplier = 0.5f;
+	public float threshold = 12;
+	public float multiplier = 0.1f;
 
 	public float maxHealth = 1f;
 	public float health;
@@ -18,7 +18,7 @@ public class DamageHandler : MonoBehaviour
 	private bool falling;
 	private float fallTime;
 	public float maxFallingTime = 2f;
-	public float fallingAnimTreshold = 0.5f;
+	public float fallingAnimTreshold = 0.2f;
 
 
 	private void Awake()
