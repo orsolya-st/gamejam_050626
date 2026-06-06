@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+guid: 538f90e730a0f7546ab3734b86c40ba9
 guid: 640e946956ffb084c8d0f325a978f7be
 TextureImporter:
   internalIDToNameTable:
@@ -153,6 +154,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
+        y: 0
+        width: 174
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
         y: 729
         width: 6
         height: 13
@@ -174,6 +180,12 @@ TextureImporter:
       name: idle sprites_1
       rect:
         serializedVersion: 2
+        x: 174
+        y: 0
+        width: 174
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
         x: 11
         y: 700
         width: 156
@@ -196,6 +208,12 @@ TextureImporter:
       name: idle sprites_2
       rect:
         serializedVersion: 2
+        x: 348
+        y: 0
+        width: 174
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
         x: 182
         y: 702
         width: 155
@@ -218,6 +236,12 @@ TextureImporter:
       name: idle sprites_3
       rect:
         serializedVersion: 2
+        x: 522
+        y: 0
+        width: 174
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
         x: 343
         y: 702
         width: 155
@@ -240,6 +264,12 @@ TextureImporter:
       name: idle sprites_4
       rect:
         serializedVersion: 2
+        x: 696
+        y: 0
+        width: 174
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
         x: 506
         y: 702
         width: 163
@@ -262,6 +292,12 @@ TextureImporter:
       name: idle sprites_5
       rect:
         serializedVersion: 2
+        x: 870
+        y: 0
+        width: 174
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
         x: 674
         y: 699
         width: 168
@@ -284,6 +320,12 @@ TextureImporter:
       name: idle sprites_6
       rect:
         serializedVersion: 2
+        x: 1044
+        y: 0
+        width: 174
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
         x: 852
         y: 699
         width: 177
@@ -306,6 +348,12 @@ TextureImporter:
       name: idle sprites_7
       rect:
         serializedVersion: 2
+        x: 1218
+        y: 0
+        width: 174
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
         x: 1045
         y: 704
         width: 182
@@ -328,6 +376,12 @@ TextureImporter:
       name: idle sprites_8
       rect:
         serializedVersion: 2
+        x: 1392
+        y: 0
+        width: 174
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
         x: 1241
         y: 706
         width: 176
@@ -350,6 +404,12 @@ TextureImporter:
       name: idle sprites_9
       rect:
         serializedVersion: 2
+        x: 1566
+        y: 0
+        width: 174
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
         x: 1427
         y: 703
         width: 163
@@ -372,6 +432,12 @@ TextureImporter:
       name: idle sprites_10
       rect:
         serializedVersion: 2
+        x: 1740
+        y: 0
+        width: 174
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
         x: 1596
         y: 706
         width: 154
@@ -438,6 +504,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
+    spriteID: 26189bb86b37500408da1f12c9a366d4
     spriteID: 
     internalID: 0
     vertices: []
@@ -446,6 +513,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":11.0,"y":1.0},"gridSpriteSize":{"x":174.0,"y":1080.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
       entries: []
     nameFileIdTable:
       idle sprites_0: -5254763888643210246
