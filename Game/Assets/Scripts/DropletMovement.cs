@@ -128,12 +128,8 @@ public class DropletMovement : MonoBehaviour
 
         while (elapsed < duration)
         {
-<<<<<<< HEAD
-            rb.useGravity = false;
-=======
             isDropping = true;
             rb.gravityScale = 0;
->>>>>>> origin/main
             transform.Translate(Vector3.down * speed * Time.deltaTime);
             elapsed += Time.deltaTime; //update time
             yield return null;
