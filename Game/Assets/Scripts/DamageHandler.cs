@@ -4,6 +4,7 @@ using Object = System.Object;
 
 public class DamageHandler : MonoBehaviour
 {
+	private Rigidbody2D rb;
 	public float threshold = 2.5f;
 	public float multiplier = 0.5f;
 
@@ -11,23 +12,35 @@ public class DamageHandler : MonoBehaviour
 	public float health;
 	public float minSize = 0.4f;
 
+	private float lastYVelocity;
+
+
+	private void Awake()
+	{
+		rb = GetComponent<Rigidbody2D>();
+	}
 
 	private void Start()
 	{
-		 threshold = 2.5f;
-		 multiplier = 0.5f;
+		 threshold = 10f;
+		 multiplier = 0.1f;
 	
 		 maxHealth = 1f;
 		 minSize = 0.8f;
 		health = maxHealth;
 	}
 
+	private void FixedUpdate()
+	{
+		lastYVelocity = rb.linearVelocityY;
+	}
+
 	private void OnCollisionEnter2D(Collision2D other)
 	{
-		float fallSpeed = GetComponent<Rigidbody2D>().linearVelocityY;	
-		if (fallSpeed > threshold)
+		float fallSpeed = lastYVelocity;		
+		if (fallSpeed < -threshold)
 		{
-			float fallDamage = (fallSpeed - threshold) * multiplier;
+			float fallDamage = (-fallSpeed - threshold) * multiplier;
 			Debug.Log($"Fell with velocity:{fallSpeed}. Fall damage{fallDamage}");
 			UpdateHealth(health - fallDamage);
 			// Debug.Log($"New health:{health - fallDamage}");
@@ -37,6 +50,7 @@ public class DamageHandler : MonoBehaviour
 			Debug.Log($"Fell with velocity:{fallSpeed}. No fall damage");
 		}
 	}
+	
 
 	public void UpdateHealth(float health)
 	{
