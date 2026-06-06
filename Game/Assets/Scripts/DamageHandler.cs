@@ -1,12 +1,21 @@
 using System;
 using UnityEngine;
+using Object = System.Object;
 
 public class DamageHandler : MonoBehaviour
 {
 	public float threshold = 0.05f;
 	public float multiplier = 5f;
 
-	public float health = 1;
+	public float maxHealth = 1f;
+	public float health;
+	public float minSize = 0.4f;
+
+
+	private void Start()
+	{
+		health = maxHealth;
+	}
 
 	private void OnCollisionEnter2D(Collision2D other)
 	{
@@ -15,11 +24,32 @@ public class DamageHandler : MonoBehaviour
 		{
 			float fallDamage = (fallSpeed - threshold) * multiplier;
 			Debug.Log($"Fell with velocity:{fallSpeed}. Fall damage{fallDamage}");
-			health -= fallDamage;
+			UpdateHealth(health - fallDamage);
+			// Debug.Log($"New health:{health - fallDamage}");
 		}
 		else
 		{
 			Debug.Log($"Fell with velocity:{fallSpeed}. No fall damage");
 		}
+	}
+
+	public void UpdateHealth(float health)
+	{
+		this.health = health;
+		Transform transform = GetComponent<Transform>();
+		float healthScaling = minSize + (1 - minSize) * (this.health / maxHealth);
+		transform.localScale = new Vector3(healthScaling,healthScaling,healthScaling);
+		Debug.Log("UpdatedScale and health");
+		
+		if(this.health <= 0f)
+		{
+			Debug.Log("Die");
+			Die();
+		}
+	}
+
+	public void Die()
+	{
+		Destroy(gameObject);
 	}
 }

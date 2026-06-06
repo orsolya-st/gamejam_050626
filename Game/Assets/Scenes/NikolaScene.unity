@@ -488,9 +488,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b3b9fc97a2d39d2d84c4be43a79247a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageHandler
-  threshold: 0
-  multiplier: 5
-  health: 1
+  threshold: 2.5
+  multiplier: 0.5
+  maxHealth: 1
+  health: 0
+  minSize: 0.4
 --- !u!1001 &1445156949
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -773,7 +775,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2163867978973577705, guid: 2f44dc6d6adb9ae7f9b4f644da0e3485, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.84
+      value: -20.5
       objectReference: {fileID: 0}
     - target: {fileID: 2163867978973577705, guid: 2f44dc6d6adb9ae7f9b4f644da0e3485, type: 3}
       propertyPath: m_LocalPosition.z
