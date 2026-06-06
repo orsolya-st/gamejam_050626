@@ -23,7 +23,7 @@ public class StartScene : MonoBehaviour
         mySpeaker.PlayOneShot(jingle);
 
         // 2. Wait for the length of the sound clip (or a fixed time)
-        yield return new WaitForSeconds(jingle.length - 0.5f); 
+        yield return new WaitForSeconds(0.4f); 
 
         // 3. Now it is safe to load the scene
         SceneManager.LoadScene(0, LoadSceneMode.Single);

@@ -19,6 +19,10 @@ public class DamageHandler : MonoBehaviour
 	public float maxFallingTime = 2f;
 	public float fallingAnimTreshold = 0.2f;
 
+	//audio stuff
+	public AudioSource speaker;
+    public AudioClip fallsound;
+
 
 	private void Awake()
 	{
@@ -69,16 +73,28 @@ public class DamageHandler : MonoBehaviour
 	}
 
 	private void OnCollisionEnter2D(Collision2D other)
-	{
-		// Debug.LogWarning("collide");
-		//on collision check fall damage
-		float fallSpeed = lastYVelocity;		
-		if (fallSpeed < -threshold)
-		{
-			float fallDamage = (-fallSpeed - threshold) * multiplier;
-			UpdateHealth(health - fallDamage);
-		}
-	}
+{
+    float fallSpeed = lastYVelocity;        
+    
+    // Check if we hit hard enough
+    if (fallSpeed < -threshold)
+    {
+        Debug.Log("Impact detected! Speed: " + fallSpeed);
+        
+        if (speaker != null && fallsound != null)
+        {
+            speaker.PlayOneShot(fallsound);
+            Debug.Log("Sound played successfully.");
+        }
+        else
+        {
+            Debug.LogWarning("AudioSource or AudioClip is missing in the Inspector!");
+        }
+
+        float fallDamage = (-fallSpeed - threshold) * multiplier;
+        UpdateHealth(health - fallDamage);
+    }
+}
 
 	private void OnTriggerEnter2D(Collider2D other)
 	{
