@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -39,7 +40,7 @@ public class DamageHandler : MonoBehaviour
 		if (lastYVelocity >= 0 && currentVelocity < 0)
 		{
 			falling = true;
-			Debug.Log("Started falling");
+			// Debug.Log("Started falling");
 			fallTime = 0f;
 		}
 		else if(lastYVelocity < 0 && currentVelocity < 0)
@@ -51,7 +52,7 @@ public class DamageHandler : MonoBehaviour
 			fallTime += Time.deltaTime;
 		} else if(currentVelocity >= 0)
 		{
-			Debug.Log("Not falling");
+			// Debug.Log("Not falling");
 			falling = false;
 		}
 		lastYVelocity = currentVelocity;
@@ -59,10 +60,7 @@ public class DamageHandler : MonoBehaviour
 
 	private void OnCollisionEnter2D(Collision2D other)
 	{
-
-		if (other.collider.CompareTag("Minidrop")){
-			UpdateHealth(0.2f);
-		}
+		// Debug.LogWarning("collide");
 		//on collision check fall damage
 		float fallSpeed = lastYVelocity;		
 		if (fallSpeed < -threshold)
@@ -71,7 +69,16 @@ public class DamageHandler : MonoBehaviour
 			UpdateHealth(health - fallDamage);
 		}
 	}
-	
+
+	private void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.CompareTag("Minidrop")){
+			UpdateHealth(health + 0.2f);
+			Destroy(other.gameObject);
+			return;	
+		}
+	}
+
 
 	public void UpdateHealth(float health)
 	{	
