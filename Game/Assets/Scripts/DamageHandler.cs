@@ -47,7 +47,7 @@ public class DamageHandler : MonoBehaviour
 		{
 			if (fallTime >= maxFallingTime)
 			{
-				Die();
+				Die("fallOut");
 			}
 			fallTime += Time.deltaTime;
 		} else if(currentVelocity >= 0)
@@ -93,13 +93,24 @@ public class DamageHandler : MonoBehaviour
 		
 		if(this.health <= 0f)
 		{
-			Die();
+			Die("fallDamage");
 		}
 	}
 
-	public void Die()
+	public void Die(String reason)
 	{
-		SceneManager.LoadScene(3, LoadSceneMode.Single);
+		if(reason == "hole")
+		{
+			SceneManager.LoadScene(3, LoadSceneMode.Single);
+			Debug.Log("Died from hole");
+		} else if (reason == "fallDamage")
+		{
+			Debug.Log("Died from fall damage");
+		} else if (reason == "fallOut")
+		{
+			Debug.Log("Fell too much");
+		}
+		
         Destroy(gameObject);
 	}
 }

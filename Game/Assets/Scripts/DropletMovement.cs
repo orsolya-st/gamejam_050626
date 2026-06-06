@@ -6,6 +6,7 @@ public class DropletMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Collider2D characterCollider;
+    private DamageHandler damageHandler;
 
     // helper variables
     private bool isGrounded = false;
@@ -34,7 +35,8 @@ public class DropletMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         characterCollider = GetComponent<Collider2D>();
-
+        damageHandler = GetComponent<DamageHandler>();
+        
         TreeSpawner.treeCount = 0;
     }
 
