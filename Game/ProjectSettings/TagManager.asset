@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Border
   - Hole
+  - Minidrop
   layers:
   - Default
   - TransparentFX

@@ -26,11 +26,11 @@ public class DamageHandler : MonoBehaviour
 
 	private void Start()
 	{
-		 threshold = 10f;
-		 multiplier = 0.1f;
+		threshold = 10f;
+		multiplier = 0.1f;
 	
-		 maxHealth = 1f;
-		 minSize = 0.8f;
+		maxHealth = 1f;
+		minSize = 0.8f;
 		health = maxHealth;
 	}
 
@@ -64,13 +64,7 @@ public class DamageHandler : MonoBehaviour
 		if (fallSpeed < -threshold)
 		{
 			float fallDamage = (-fallSpeed - threshold) * multiplier;
-			// Debug.Log($"Fell with velocity:{fallSpeed}. Fall damage{fallDamage}");
 			UpdateHealth(health - fallDamage);
-			// Debug.Log($"New health:{health - fallDamage}");
-		}
-		else
-		{
-			// Debug.Log($"Fell with velocity:{fallSpeed}. No fall damage");
 		}
 	}
 	
@@ -80,12 +74,11 @@ public class DamageHandler : MonoBehaviour
 		this.health = health;
 		Transform transform = GetComponent<Transform>();
 		float healthScaling = minSize + (1 - minSize) * (this.health / maxHealth);
+		//adjust size based on health
 		transform.localScale = new Vector3(healthScaling,healthScaling,healthScaling);
-		// Debug.Log("UpdatedScale and health");
 		
 		if(this.health <= 0f)
 		{
-			// Debug.Log("Die");
 			Die();
 		}
 	}

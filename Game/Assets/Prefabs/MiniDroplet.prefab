@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8211840801622381919}
   m_Layer: 0
   m_Name: MiniDroplet
-  m_TagString: Untagged
+  m_TagString: Minidrop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

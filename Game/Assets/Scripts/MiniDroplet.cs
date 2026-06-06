@@ -11,10 +11,4 @@ public class MiniDroplet : MonoBehaviour
 
         transform.localScale = targetSize;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
