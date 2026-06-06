@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3683337692723927349}
   - component: {fileID: 8100904432411870408}
   - component: {fileID: 8092102445200365313}
+  - component: {fileID: 5615831806268684012}
+  - component: {fileID: 2764455090306147063}
   m_Layer: 0
   m_Name: Tree
   m_TagString: Untagged
@@ -114,3 +116,30 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5615831806268684012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8851845362353968682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e2ad5a7116f03541a6489c22953c195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PatternSelecter
+--- !u!114 &2764455090306147063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8851845362353968682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 021d37d1b6e71b143adc6f4842f7d76c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TreeSpawner
+  treePrefab: {fileID: 8851845362353968682}
+  treeEndPrefab: {fileID: 8851845362353968682, guid: 04f205e87b1c6a220854a46b28504af3, type: 3}
+  maxTreeCount: 8

@@ -3113,38 +3113,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8851845362353968682, guid: 63a81e9c39aed7249bdeb557c0054e6c, type: 3}
   m_PrefabInstance: {fileID: 1681788161}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &526821483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 526821479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 021d37d1b6e71b143adc6f4842f7d76c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TreeSpawner
-  treePrefab: {fileID: 526821479}
-  player: {fileID: 662084242}
 --- !u!4 &526821486 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3683337692723927349, guid: 63a81e9c39aed7249bdeb557c0054e6c, type: 3}
   m_PrefabInstance: {fileID: 1681788161}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &526821489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 526821479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e2ad5a7116f03541a6489c22953c195, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PatternSelecter
-  lastTreeNumber: 2
 --- !u!1001 &527539761
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3781,11 +3754,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be3a9de7cfa00b3c4b66acee4ff178f6, type: 3}
---- !u!1 &614828868 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2141180002423843430, guid: d56297e435f8410a584581d73d99d2e4, type: 3}
-  m_PrefabInstance: {fileID: 1445156949}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &616256297 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9198730630941053147, guid: 09646d5b25a07904aa2ddf7399b3b075, type: 3}
@@ -4127,25 +4095,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6566899495513628888, guid: d56297e435f8410a584581d73d99d2e4, type: 3}
   m_PrefabInstance: {fileID: 1445156949}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &662084249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 614828868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b3b9fc97a2d39d2d84c4be43a79247a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DamageHandler
-  threshold: 10
-  multiplier: 0.05
-  maxHealth: 1
-  health: 0
-  minSize: 0.4
-  maxFallingTime: 2
-  fallingAnimTreshold: 0.2
 --- !u!1001 &687478031
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8314,6 +8263,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7565136154044711909, guid: d56297e435f8410a584581d73d99d2e4, type: 3}
+      propertyPath: treePrefab
+      value: 
+      objectReference: {fileID: 526821479}
+    - target: {fileID: 7565136154044711909, guid: d56297e435f8410a584581d73d99d2e4, type: 3}
+      propertyPath: maxTreeCount
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7565136154044711909, guid: d56297e435f8410a584581d73d99d2e4, type: 3}
+      propertyPath: treeEndPrefab
+      value: 
+      objectReference: {fileID: 8851845362353968682, guid: 04f205e87b1c6a220854a46b28504af3, type: 3}
     - target: {fileID: 8298564220872302505, guid: d56297e435f8410a584581d73d99d2e4, type: 3}
       propertyPath: m_SortingLayer
       value: 0
@@ -8329,10 +8290,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2141180002423843430, guid: d56297e435f8410a584581d73d99d2e4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 662084249}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d56297e435f8410a584581d73d99d2e4, type: 3}
 --- !u!1001 &1459355171
 PrefabInstance:
@@ -9744,6 +9702,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -2
       objectReference: {fileID: 0}
+    - target: {fileID: 2764455090306147063, guid: 63a81e9c39aed7249bdeb557c0054e6c, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 662084242}
+    - target: {fileID: 2764455090306147063, guid: 63a81e9c39aed7249bdeb557c0054e6c, type: 3}
+      propertyPath: maxTreeCount
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3683337692723927349, guid: 63a81e9c39aed7249bdeb557c0054e6c, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -9796,6 +9762,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8420612515300817353, guid: 63a81e9c39aed7249bdeb557c0054e6c, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 662084242}
     - target: {fileID: 8851845362353968682, guid: 63a81e9c39aed7249bdeb557c0054e6c, type: 3}
       propertyPath: m_Name
       value: Tree
@@ -9836,13 +9806,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3683337692723927349, guid: 63a81e9c39aed7249bdeb557c0054e6c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1293808330}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8851845362353968682, guid: 63a81e9c39aed7249bdeb557c0054e6c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 526821483}
-    - targetCorrespondingSourceObject: {fileID: 8851845362353968682, guid: 63a81e9c39aed7249bdeb557c0054e6c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 526821489}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63a81e9c39aed7249bdeb557c0054e6c, type: 3}
 --- !u!1001 &1684265244
 PrefabInstance:
