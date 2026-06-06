@@ -7,6 +7,9 @@ public class TreeSpawner : MonoBehaviour
 
     private bool hasSpawned = false;
 
+    public static int treeCount;
+
+
     void Update()
     {
         if (hasSpawned == false)
@@ -18,7 +21,9 @@ public class TreeSpawner : MonoBehaviour
                 float treeHeight = GetComponent<SpriteRenderer>().bounds.size.y;
                 Vector3 spawnPos = transform.position + Vector3.down * treeHeight + new Vector3(0, 0.2f, 0);
 
+                treeCount++;
                 Instantiate(treePrefab, spawnPos, Quaternion.identity);
+                
             }
         }
 

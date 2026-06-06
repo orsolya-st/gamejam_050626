@@ -2,24 +2,21 @@ using UnityEngine;
 
 public class PatternSelecter : MonoBehaviour
 {
-
-
-    bool isStarting = true;
     void Start()
     {
-        
-        if (isStarting)
+        foreach (Transform child in transform)
         {
-            transform.GetChild(0).gameObject.SetActive(true);
-        } else
-        {
-            foreach (Transform child in transform)
-                child.gameObject.SetActive(false);
-
-            int randomIndex = Random.Range(1, transform.childCount);
-
-            transform.GetChild(randomIndex).gameObject.SetActive(true);
+            child.gameObject.SetActive(false);
         }
 
+        if (TreeSpawner.treeCount == 0)
+        {
+            transform.GetChild(0).gameObject.SetActive(true);
+        }
+        else
+        {
+            int randomIndex = Random.Range(1, transform.childCount);
+            transform.GetChild(randomIndex).gameObject.SetActive(true);
+        }
     }
 }
