@@ -110,21 +110,11 @@ public class DropletMovement : MonoBehaviour
         isGrounded = false;
     }
 
-    private void DropDown()
-    {
-        //when "s" or "down key" is pressed turn of/disable collider;
-        //move object slowly down (1 seconds, move down the height of the collision box)
-        //after that enable collider again
-
-        if (isGrounded && (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)))
-        {
-            StartCoroutine(DropRoutine());
-        }
-    }
-
+    
     private IEnumerator DropRoutine()
     {
         Collider2D playerCollider = GetComponent<Collider2D>();
+        rb = GetComponent<Rigidbody2D>();
 
         playerCollider.isTrigger = true;
             
@@ -137,12 +127,15 @@ public class DropletMovement : MonoBehaviour
 
         while (elapsed < duration)
         {
+            rb.useGravity = false;
             transform.Translate(Vector3.down * speed * Time.deltaTime);
             elapsed += Time.deltaTime; //update time
             yield return null;
         }
 
         //enable collider --> not a trigger anymore
+        rb.useGravity = true;
         playerCollider.isTrigger = false;
+
     }
 }
