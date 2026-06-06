@@ -4926,8 +4926,8 @@ MonoBehaviour:
   - {fileID: 1924660664}
   windStrength: 2
   windDuration: 5
-  minTimeBetweenWind: 2
-  maxTimeBetweenWind: 5
+  minTimeBetweenWind: 7
+  maxTimeBetweenWind: 12
 --- !u!4 &809899008
 Transform:
   m_ObjectHideFlags: 0
