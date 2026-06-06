@@ -72,7 +72,8 @@ public class DamageHandler : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.CompareTag("Minidrop")){
+		if (other.CompareTag("Minidrop"))
+		{
 			UpdateHealth(health + 0.2f);
 			Destroy(other.gameObject);
 			return;	
