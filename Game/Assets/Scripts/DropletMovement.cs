@@ -62,13 +62,7 @@ public class DropletMovement : MonoBehaviour
         }
 
         //Jump animation
-        if (rb.linearVelocityY > 1)
-        {
-            animator.SetBool("Jumping", true);
-        } else
-        {
-            animator.SetBool("Jumping", false);
-        }
+        
         if (rb.linearVelocityY < -0.5 && !isGrounded)
         {
             animator.SetBool("Falling", true);
