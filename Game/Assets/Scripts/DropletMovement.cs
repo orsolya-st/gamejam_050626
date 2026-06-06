@@ -31,6 +31,9 @@ public class DropletMovement : MonoBehaviour
 
     void Update()
     {
+
+        //collision
+
         
         //dashing
         if (isDashing)
@@ -71,6 +74,12 @@ public class DropletMovement : MonoBehaviour
 
         rb.linearVelocity = new Vector2(movement.x * moveSpeed, rb.linearVelocity.y);
     }
+
+    /*void OnCollisionEnter2D(Collision2D collision)
+    {
+        //if (collision.collider.GetType() == typeof(BoxCollider) && collision.collider.GetComponent == ) {
+        Destroy(gameObject); //base: destroys the game object
+    }*/
 
     private IEnumerator Dash()
     {
