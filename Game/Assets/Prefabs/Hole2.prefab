@@ -14,15 +14,15 @@ PrefabInstance:
       objectReference: {fileID: 8202443142119586323, guid: ff1510cecc7e92d4998f1cd52dad891f, type: 3}
     - target: {fileID: 3028864304894384228, guid: 2104fa77ddd078b48b1f646a4be3ccf8, type: 3}
       propertyPath: m_Name
-      value: Hole2 Variant
+      value: Hole2
       objectReference: {fileID: 0}
     - target: {fileID: 7329357223832181834, guid: 2104fa77ddd078b48b1f646a4be3ccf8, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.9765841
+      value: 0.95
       objectReference: {fileID: 0}
     - target: {fileID: 7329357223832181834, guid: 2104fa77ddd078b48b1f646a4be3ccf8, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.98969835
+      value: 0.95
       objectReference: {fileID: 0}
     - target: {fileID: 7329357223832181834, guid: 2104fa77ddd078b48b1f646a4be3ccf8, type: 3}
       propertyPath: m_LocalScale.z
@@ -70,11 +70,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204716000211697423, guid: 2104fa77ddd078b48b1f646a4be3ccf8, type: 3}
       propertyPath: m_Size.x
-      value: 0.9
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 9204716000211697423, guid: 2104fa77ddd078b48b1f646a4be3ccf8, type: 3}
       propertyPath: m_Size.y
-      value: 0.9
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
