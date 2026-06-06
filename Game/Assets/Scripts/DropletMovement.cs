@@ -33,20 +33,23 @@ public class DropletMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        characterCollider = GetComponent<Collider2D>();
     }
 
     [System.Obsolete]
     void Update()
     {
-        
-        //dashing
-        if (isDashing || isGrounded == false)
+        if (isDashing || isDropping)
         {
             return;
         }
+
+        //dashing
         movement.x = Input.GetAxisRaw("Horizontal");
         if (movement.x < 0) facingDirection = -1;
         if (movement.x > 0) facingDirection = 1;
+
+        //Jumping
         if (isGrounded &&
             (Input.GetKeyDown(KeyCode.Space) ||
              Input.GetKeyDown(KeyCode.UpArrow) ||
@@ -55,6 +58,8 @@ public class DropletMovement : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
         }
+
+        //Jump animation
         if (rb.linearVelocityY > 1)
         {
             animator.SetBool("Jumping", true);
@@ -62,6 +67,8 @@ public class DropletMovement : MonoBehaviour
         {
             animator.SetBool("Jumping", false);
         }
+
+        //Walk animation
         if (movement.x > 0) {
             animator.SetBool("WalkingRight", true);
             animator.SetBool("WalkingLeft", false);
@@ -74,14 +81,15 @@ public class DropletMovement : MonoBehaviour
             animator.SetBool("WalkingRight", false);
             animator.SetBool("WalkingLeft", false);
         }
+
+        //Dashing
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
             StartCoroutine(Dash());
         }
         
         //dropdown
-        if (!isGrounded){return;}
-        if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
+        if (isGrounded && (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)))
         {
             DropDown();
         }
@@ -106,7 +114,6 @@ public class DropletMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-
         //Hole
         if (other.CompareTag("Hole"))
         {
@@ -149,13 +156,31 @@ public class DropletMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {   
-        if (col.collider.CompareTag("Platform") && rb.linearVelocity.y == 0)
+        /*if (col.collider.CompareTag("Platform"))
         {
             isGrounded = true;
         }
         else
         {
             isGrounded = false;
+        }*/
+
+        CheckGrounded(col);
+    }
+
+    private void CheckGrounded(Collision2D col)
+    {
+        if (col.collider.CompareTag("Platform"))
+        {
+            // Verify the character is actually standing on top of the platform
+            for (int i = 0; i < col.contactCount; i++)
+            {
+                if (col.GetContact(i).normal.y >= 0.5f)
+                {
+                    isGrounded = true;
+                    return;
+                }
+            }
         }
     }
 
@@ -181,36 +206,33 @@ public class DropletMovement : MonoBehaviour
             animator.SetBool("WalkingLeft", false);
             StartCoroutine(DropRoutine());
         }
-        
     }
 
     private IEnumerator DropRoutine()
     {
-        Collider2D playerCollider = GetComponent<Collider2D>();
-        rb = GetComponent<Rigidbody2D>();
-        rb.linearVelocityX = 0;
-
-        playerCollider.isTrigger = true;
+        isDropping = true; // Lock out other actions immediately
+        rb.linearVelocityX = 0; // Strip horizontal momentum
+        
+        characterCollider.isTrigger = true;
             
         float duration = 1f;
-        float elapsed = 0f; //measure time
+        float elapsed = 0f; // measure time
             
-        //move down the height of the collider
-        float dropDistance = playerCollider.bounds.size.y;
+        // move down the height of the collider
+        float dropDistance = characterCollider.bounds.size.y;
         float speed = dropDistance / duration;
 
         while (elapsed < duration)
         {
-            isDropping = true;
             rb.gravityScale = 0;
             transform.Translate(Vector3.down * speed * Time.deltaTime);
-            elapsed += Time.deltaTime; //update time
+            elapsed += Time.deltaTime; // update time
             yield return null;
         }
 
-        //enable collider --> not a trigger anymore
+        // enable collider --> not a trigger anymore
         rb.gravityScale = 1;
-        playerCollider.isTrigger = false;
+        characterCollider.isTrigger = false;
         isDropping = false;
         isGrounded = false;
         animator.SetBool("Dropping", false);
