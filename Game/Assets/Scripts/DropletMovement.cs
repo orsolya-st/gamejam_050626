@@ -34,6 +34,8 @@ public class DropletMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         characterCollider = GetComponent<Collider2D>();
+
+        TreeSpawner.treeCount = 0;
     }
 
     [System.Obsolete]
