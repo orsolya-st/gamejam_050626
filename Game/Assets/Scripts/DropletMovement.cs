@@ -8,7 +8,7 @@ public class DropletMovement : MonoBehaviour
     private Collider2D characterCollider;
 
     // helper variables
-    private bool isGrounded = true;
+    private bool isGrounded = false;
     private float facingDirection = 1f;
     private bool isDropping = false;
     private float fallTimer;
@@ -40,7 +40,7 @@ public class DropletMovement : MonoBehaviour
     {
         
         //dashing
-        if (isDashing)
+        if (isDashing || isGrounded == false)
         {
             return;
         }
@@ -91,20 +91,17 @@ public class DropletMovement : MonoBehaviour
     private void FixedUpdate()
     {
         if (isDashing || isDropping)
-    {
+        {
         return;
-        } // was here before
+        }
 
+        //wind
         float windForce = 0f;
-
         if (WindManager.Instance != null)
         {
             windForce = WindManager.Instance.CurrentWindForce;
         }
-
         rb.linearVelocity = new Vector2(movement.x * moveSpeed + windForce, rb.linearVelocity.y);
-
-        //used to be rb.linearVelocity = new Vector2(movement.x * moveSpeed, rb.linearVelocity.y);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -151,8 +148,23 @@ public class DropletMovement : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D col)
+    {   
+        if (col.collider.CompareTag("Platform") && rb.linearVelocity.y == 0)
+        {
+            isGrounded = true;
+        }
+        else
+        {
+            isGrounded = false;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
     {
-        isGrounded = true;
+        if (collision.collider.CompareTag("Platform"))
+        {
+            isGrounded = false;
+        }
     }
 
 

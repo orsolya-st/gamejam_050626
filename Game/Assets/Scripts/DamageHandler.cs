@@ -1,6 +1,5 @@
-using System;
+using System.Collections;
 using UnityEngine;
-using Object = System.Object;
 using UnityEngine.SceneManagement;
 
 public class DamageHandler : MonoBehaviour
@@ -26,11 +25,11 @@ public class DamageHandler : MonoBehaviour
 
 	private void Start()
 	{
-		 threshold = 10f;
-		 multiplier = 0.1f;
+		threshold = 10f;
+		multiplier = 0.1f;
 	
-		 maxHealth = 1f;
-		 minSize = 0.8f;
+		maxHealth = 1f;
+		minSize = 0.8f;
 		health = maxHealth;
 	}
 
@@ -60,32 +59,32 @@ public class DamageHandler : MonoBehaviour
 
 	private void OnCollisionEnter2D(Collision2D other)
 	{
+
+		if (other.collider.CompareTag("Minidrop")){
+			UpdateHealth(0.2f);
+		}
+		//on collision check fall damage
 		float fallSpeed = lastYVelocity;		
 		if (fallSpeed < -threshold)
 		{
 			float fallDamage = (-fallSpeed - threshold) * multiplier;
-			// Debug.Log($"Fell with velocity:{fallSpeed}. Fall damage{fallDamage}");
 			UpdateHealth(health - fallDamage);
-			// Debug.Log($"New health:{health - fallDamage}");
-		}
-		else
-		{
-			// Debug.Log($"Fell with velocity:{fallSpeed}. No fall damage");
 		}
 	}
 	
 
 	public void UpdateHealth(float health)
-	{
+	{	
 		this.health = health;
+		if (health > maxHealth) this.health = maxHealth;
+
 		Transform transform = GetComponent<Transform>();
 		float healthScaling = minSize + (1 - minSize) * (this.health / maxHealth);
+		//adjust size based on health
 		transform.localScale = new Vector3(healthScaling,healthScaling,healthScaling);
-		// Debug.Log("UpdatedScale and health");
 		
 		if(this.health <= 0f)
 		{
-			// Debug.Log("Die");
 			Die();
 		}
 	}
