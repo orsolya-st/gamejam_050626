@@ -140,10 +140,6 @@ public class DropletMovement : MonoBehaviour
         isGrounded = true;
     }
 
-    private void OnCollisionExit2D(Collision2D col)
-    {
-        isGrounded = false;
-    }
 
     private void DropDown()
     {
