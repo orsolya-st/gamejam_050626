@@ -75,11 +75,14 @@ public class DropletMovement : MonoBehaviour
         rb.linearVelocity = new Vector2(movement.x * moveSpeed, rb.linearVelocity.y);
     }
 
-    /*void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        //if (collision.collider.GetType() == typeof(BoxCollider) && collision.collider.GetComponent == ) {
-        Destroy(gameObject); //base: destroys the game object
-    }*/
+        if (other.CompareTag("Border"))
+        {
+            Destroy(gameObject); //for now it destroys the droplet
+            Debug.Log("Droplet dropped down, animation, game end!");
+        }
+    }
 
     private IEnumerator Dash()
     {
