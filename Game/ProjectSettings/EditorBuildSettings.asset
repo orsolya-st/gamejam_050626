@@ -6,6 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/0_MainScene.unity
+    guid: d2d2c9db7474007bcaa87303572f81d2
+  - enabled: 1
+    path: Assets/Scenes/1_Start scene.unity
+    guid: 5ab1c38e7f1439240ba8015b2cba0456
+  - enabled: 1
+    path: Assets/Scenes/2_Hole Death scene.unity
+    guid: 0839cf3bf6fef3243a2d64d6021aaef7
+  - enabled: 1
+    path: Assets/Scenes/3_Fall splash scene.unity
+    guid: 1ed9250a43b781e4ba8b664e2ff711cb
+  - enabled: 1
+    path: Assets/Scenes/4_Fall down scene.unity
+    guid: 875562207fb557647b238e4f42bc0394
+  - enabled: 1
+    path: Assets/Scenes/5_End scene.unity
+    guid: ea703d38ac6092a46b03a3f56b8e7cb5
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   m_configObjects:
