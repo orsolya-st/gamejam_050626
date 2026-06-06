@@ -137,10 +137,6 @@ public class DropletMovement : MonoBehaviour
         }
 
         //enable collider --> not a trigger anymore
-<<<<<<< HEAD
-        rb.useGravity = true;
-        playerCollider.isTrigger = false;
-=======
         rb.gravityScale = 1;
         playerCollider.isTrigger = false;
         isDropping = false;
