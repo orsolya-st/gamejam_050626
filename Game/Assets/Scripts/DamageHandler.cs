@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -66,6 +65,7 @@ public class DamageHandler : MonoBehaviour
 		{
 			animator.SetBool("Falling",false);
 		}
+
 	}
 
 	private void OnCollisionEnter2D(Collision2D other)

@@ -5,6 +5,8 @@ public class WindManager : MonoBehaviour
 {
     public static WindManager Instance;
 
+    public GameObject[] windEffects;
+
     public float windStrength = 5f;
     public float windDuration = 10f;
 
@@ -20,6 +22,11 @@ public class WindManager : MonoBehaviour
 
     void Start()
     {
+        foreach (GameObject effect in windEffects)
+        {
+            effect.SetActive(false);
+        }
+
         StartCoroutine(WindRoutine());
     }
 
@@ -27,21 +34,30 @@ public class WindManager : MonoBehaviour
     {
         while (true)
         {
-            float waitTime = Random.Range(
-                minTimeBetweenWind,
-                maxTimeBetweenWind
-            );
-
+            float waitTime = Random.Range(minTimeBetweenWind, maxTimeBetweenWind);
             yield return new WaitForSeconds(waitTime);
 
-            CurrentWindForce =
-                Random.value < 0.5f
-                ? -windStrength
-                : windStrength;
+            bool windGoesLeft = Random.value < 0.5f;
+
+            CurrentWindForce = windGoesLeft ? -windStrength : windStrength;
+
+            foreach (GameObject effect in windEffects)
+            {
+                effect.transform.localScale = windGoesLeft
+                    ? new Vector3(1, 1, 1)
+                    : new Vector3(-1, 1, 1);
+
+                effect.SetActive(true);
+            }
 
             yield return new WaitForSeconds(windDuration);
 
             CurrentWindForce = 0f;
+
+            foreach (GameObject effect in windEffects)
+            {
+                effect.SetActive(false);
+            }
         }
     }
 }
