@@ -14,6 +14,9 @@ public class DamageHandler : MonoBehaviour
 	public float minSize = 0.4f;
 
 	private float lastYVelocity;
+	private bool falling;
+	private float fallTime;
+	public float maxFallingTime = 2f;
 
 
 	private void Awake()
@@ -33,7 +36,26 @@ public class DamageHandler : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		lastYVelocity = rb.linearVelocityY;
+		float currentVelocity = rb.linearVelocityY;
+		if (lastYVelocity >= 0 && currentVelocity < 0)
+		{
+			falling = true;
+			Debug.Log("Started falling");
+			fallTime = 0f;
+		}
+		else if(lastYVelocity < 0 && currentVelocity < 0)
+		{
+			if (fallTime >= maxFallingTime)
+			{
+				Die();
+			}
+			fallTime += Time.deltaTime;
+		} else if(currentVelocity >= 0)
+		{
+			Debug.Log("Not falling");
+			falling = false;
+		}
+		lastYVelocity = currentVelocity;
 	}
 
 	private void OnCollisionEnter2D(Collision2D other)
@@ -42,13 +64,13 @@ public class DamageHandler : MonoBehaviour
 		if (fallSpeed < -threshold)
 		{
 			float fallDamage = (-fallSpeed - threshold) * multiplier;
-			Debug.Log($"Fell with velocity:{fallSpeed}. Fall damage{fallDamage}");
+			// Debug.Log($"Fell with velocity:{fallSpeed}. Fall damage{fallDamage}");
 			UpdateHealth(health - fallDamage);
 			// Debug.Log($"New health:{health - fallDamage}");
 		}
 		else
 		{
-			Debug.Log($"Fell with velocity:{fallSpeed}. No fall damage");
+			// Debug.Log($"Fell with velocity:{fallSpeed}. No fall damage");
 		}
 	}
 	
@@ -59,11 +81,11 @@ public class DamageHandler : MonoBehaviour
 		Transform transform = GetComponent<Transform>();
 		float healthScaling = minSize + (1 - minSize) * (this.health / maxHealth);
 		transform.localScale = new Vector3(healthScaling,healthScaling,healthScaling);
-		Debug.Log("UpdatedScale and health");
+		// Debug.Log("UpdatedScale and health");
 		
 		if(this.health <= 0f)
 		{
-			Debug.Log("Die");
+			// Debug.Log("Die");
 			Die();
 		}
 	}
