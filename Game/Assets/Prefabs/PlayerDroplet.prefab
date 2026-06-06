@@ -187,6 +187,7 @@ MonoBehaviour:
   dashingTime: 0.2
   dashingCooldown: 1
   tr: {fileID: 0}
+  animator: {fileID: 4218697106962905645}
 --- !u!111 &5971260404453589572
 Animation:
   m_ObjectHideFlags: 0
@@ -199,6 +200,7 @@ Animation:
   m_Animation: {fileID: 7400000, guid: 9c05e7e3341328e45b70c952167a4bfd, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 9c05e7e3341328e45b70c952167a4bfd, type: 2}
+  - {fileID: 7400000, guid: 5acd4bf343da8104a87c0c0547f97bb8, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 1

@@ -23,6 +23,7 @@ public class DropletMovement : MonoBehaviour
     public float dashingCooldown = 1f;
 
     [SerializeField] private TrailRenderer tr;
+    [SerializeField] private Animator animator;
 
     void Start()
     {
@@ -50,6 +51,18 @@ public class DropletMovement : MonoBehaviour
              && !isDropping)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
+        }
+        if (movement.x > 0) {
+            animator.SetBool("WalkingRight", true);
+            animator.SetBool("WalkingLeft", false);
+        } else if (movement.x <0 && movement.x != 0)
+        {
+            animator.SetBool("WalkingRight", false);
+            animator.SetBool("WalkingLeft", true);
+        } else
+        {
+            animator.SetBool("WalkingRight", false);
+            animator.SetBool("WalkingLeft", false);
         }
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
