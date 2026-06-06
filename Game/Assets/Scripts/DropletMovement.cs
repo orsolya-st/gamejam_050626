@@ -125,6 +125,7 @@ public class DropletMovement : MonoBehaviour
     private IEnumerator DropRoutine()
     {
         Collider2D playerCollider = GetComponent<Collider2D>();
+        rb = GetComponent<Rigidbody2D>();
 
         playerCollider.isTrigger = true;
             
@@ -137,12 +138,15 @@ public class DropletMovement : MonoBehaviour
 
         while (elapsed < duration)
         {
+            rb.gravityScale = 0;
             transform.Translate(Vector3.down * speed * Time.deltaTime);
             elapsed += Time.deltaTime; //update time
             yield return null;
         }
 
         //enable collider --> not a trigger anymore
+        rb.gravityScale = 1;
         playerCollider.isTrigger = false;
+
     }
 }
