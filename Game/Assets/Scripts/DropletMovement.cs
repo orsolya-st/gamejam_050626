@@ -125,7 +125,7 @@ public class DropletMovement : MonoBehaviour
         //Hole
         if (other.CompareTag("Hole"))
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
             Debug.Log("Fell in hole!");
         }
 
