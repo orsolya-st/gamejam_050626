@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using Object = System.Object;
+using UnityEngine.SceneManagement;
 
 public class DamageHandler : MonoBehaviour
 {
@@ -69,6 +70,7 @@ public class DamageHandler : MonoBehaviour
 
 	public void Die()
 	{
-		Destroy(gameObject);
+		SceneManager.LoadScene(3, LoadSceneMode.Single);
+        Destroy(gameObject);
 	}
 }
