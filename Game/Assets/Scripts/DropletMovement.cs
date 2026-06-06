@@ -114,11 +114,19 @@ public class DropletMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Border"))
+        /*if (other.CompareTag("Border"))
         {
             Destroy(gameObject); //for now it destroys the droplet
             Debug.Log("Droplet dropped down, animation, game end!");
+        }*/
+
+        //Hole
+        if (other.CompareTag("Hole"))
+        {
+            Destroy(gameObject);
+            Debug.Log("Fell in hole!");
         }
+
     }
 
     [System.Obsolete]
