@@ -11,6 +11,12 @@ public class Timer : MonoBehaviour
     private bool timerIsRunning = false;
 
     public GameObject targetObject;
+    public DamageHandler damageHandler;
+
+    private void Start()
+    {
+        damageHandler = targetObject.GetComponent<DamageHandler>();
+    }
 
     void Update()
     {
@@ -51,8 +57,8 @@ public class Timer : MonoBehaviour
 
         if (timeRemaining <= 0)
         {
-            SceneManager.LoadScene(4, LoadSceneMode.Single);
-            Destroy(targetObject);
+            //SceneManager.LoadScene(3, LoadSceneMode.Single);
+            damageHandler.Die("Timer");
         }
     }
 

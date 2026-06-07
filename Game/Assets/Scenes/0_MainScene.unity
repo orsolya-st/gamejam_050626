@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &118794739 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2141180002423843430, guid: d56297e435f8410a584581d73d99d2e4, type: 3}
+  m_PrefabInstance: {fileID: 1445156949}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &505713147
 GameObject:
   m_ObjectHideFlags: 0
@@ -1824,8 +1829,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Timer
   timeText: {fileID: 2009337314}
-  timeRemaining: 89
-  targetObject: {fileID: 0}
+  timeRemaining: 10
+  targetObject: {fileID: 118794739}
+  damageHandler: {fileID: 0}
 --- !u!114 &2112957321
 MonoBehaviour:
   m_ObjectHideFlags: 0

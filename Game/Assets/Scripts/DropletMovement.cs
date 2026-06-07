@@ -12,8 +12,6 @@ public class DropletMovement : MonoBehaviour
     private bool isGrounded = false;
     private float facingDirection = 1f;
     private bool isDropping = false;
-    private float fallTimer;
-    private bool isFalling;
     public float maxFallTime = 0.5f;
 
     // movement

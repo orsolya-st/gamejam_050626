@@ -146,7 +146,7 @@ public class DamageHandler : MonoBehaviour
         isDead = true;
 		
 		TreeSpawner.treeCount = 0;
-		if(reason == "hole")
+		if (reason == "hole")
 		{
 			SceneManager.LoadScene(2, LoadSceneMode.Single);
 			Debug.Log("Died from hole");
@@ -154,8 +154,10 @@ public class DamageHandler : MonoBehaviour
 		{
 			Debug.Log("Fell too much");
 			SceneManager.LoadScene(3, LoadSceneMode.Single);
-			Destroy(gameObject);
-
+		} else if (reason == "Timer")
+		{
+			SceneManager.LoadScene(3,LoadSceneMode.Single);
 		}
-	}
+        Destroy(gameObject);
+    }
 }
