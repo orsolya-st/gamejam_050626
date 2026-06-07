@@ -354,6 +354,7 @@ MonoBehaviour:
   fallingAnimTreshold: 0.2
   speaker: {fileID: 0}
   fallsound: {fileID: 0}
+  splashSound: {fileID: 0}
 --- !u!1 &750131489
 GameObject:
   m_ObjectHideFlags: 0
@@ -785,6 +786,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6923417058730395781, guid: d56297e435f8410a584581d73d99d2e4, type: 3}
+      propertyPath: splashSound
+      value: 
+      objectReference: {fileID: 8300000, guid: ee9cb5a3a69c54c459e4674d34660c27, type: 3}
     - target: {fileID: 8298564220872302505, guid: d56297e435f8410a584581d73d99d2e4, type: 3}
       propertyPath: m_SortingLayer
       value: 0

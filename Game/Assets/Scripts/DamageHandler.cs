@@ -23,8 +23,10 @@ public class DamageHandler : MonoBehaviour
 	public AudioSource speaker;
     public AudioClip fallsound;
 
+    public AudioClip splashSound;
 
-	private void Awake()
+
+    private void Awake()
 	{
 		rb = GetComponent<Rigidbody2D>();
 		animator = GetComponent<Animator>();
@@ -101,7 +103,8 @@ public class DamageHandler : MonoBehaviour
 		if (other.CompareTag("Minidrop"))
 		{
 			UpdateHealth(health + 0.2f);
-			Destroy(other.gameObject);
+            AudioSource.PlayClipAtPoint(splashSound, Camera.main.transform.position);
+            Destroy(other.gameObject);
 			return;	
 		}
 	}

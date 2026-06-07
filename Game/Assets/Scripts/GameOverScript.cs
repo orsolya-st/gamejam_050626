@@ -11,6 +11,9 @@ public class GameOverScript : MonoBehaviour
     [SerializeField]
     private float duration = 2.0f;
 
+    [SerializeField]
+    private AudioSource audioSource;
+
     void Start()
     {
         image.SetActive(false);
@@ -23,6 +26,10 @@ public class GameOverScript : MonoBehaviour
         elapsed += Time.deltaTime;
         if(elapsed >= duration) { 
            image.SetActive(true);
+            if (audioSource != null)
+            {
+                audioSource.Play();
+            }
             if (Input.anyKeyDown)
             {
                 SceneManager.LoadScene(0, LoadSceneMode.Single);
