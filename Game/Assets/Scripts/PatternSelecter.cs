@@ -3,8 +3,6 @@ using UnityEngine;
 public class PatternSelecter : MonoBehaviour
 
 {
-    [SerializeField]
-    private int lastTreeNumber = 8;
 
     void Start()
     {
@@ -16,11 +14,6 @@ public class PatternSelecter : MonoBehaviour
         if (TreeSpawner.treeCount == 0)
         {
             transform.GetChild(0).gameObject.SetActive(true);
-        }
-
-        else if (TreeSpawner.treeCount == lastTreeNumber)
-        {
-            transform.GetChild(transform.childCount - 1).gameObject.SetActive(true);
         }
         else
         {

@@ -1,35 +1,59 @@
+using System;
 using UnityEngine;
 
 public class TreeSpawner : MonoBehaviour
 {
-    public GameObject treePrefab;
+    [SerializeField]
+    private GameObject treePrefab;
+    [SerializeField]
+    private GameObject treeEndPrefab;
     public Transform player;
+    [SerializeField]
+    private static int maxTreeCount = 1;
 
     private bool hasSpawned = false;
 
     public static int treeCount;
 
+    private SpriteRenderer spriteRenderer;
+
+    private void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
 
     void Update()
     {
-        if (hasSpawned == false)
+        if (hasSpawned == false && treeCount < maxTreeCount)
         {
             if (player.position.y < transform.position.y - 3f)
             {
                 hasSpawned = true;
 
-                float treeHeight = GetComponent<SpriteRenderer>().bounds.size.y;
+                float treeHeight = spriteRenderer.bounds.size.y;
                 Vector3 spawnPos = transform.position + Vector3.down * treeHeight + new Vector3(0, 0.2f, 0);
-
+                
                 treeCount++;
-                GameObject newTree = Instantiate(treePrefab, spawnPos, Quaternion.identity);
+                Debug.Log($"Spawned Treee{treeCount}");
+                if(treeCount == maxTreeCount)
+                {
+                    spawnPos += new Vector3(0.27f,0.54f,0);
+                    Instantiate(treeEndPrefab, spawnPos, Quaternion.identity);
+                }
+                else Instantiate(treePrefab, spawnPos, Quaternion.identity);
             }
         }
 
         // Delete trees that are far above the player
         if (player.position.y < transform.position.y - 40f)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            gameObject.SetActive(true);
         }
     }
+
 }
