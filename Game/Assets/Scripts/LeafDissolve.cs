@@ -15,6 +15,10 @@ public class LeafDissolve : MonoBehaviour
     private float disolveTime;
 
     private BoxCollider2D collider;
+
+    //audio stuff
+    public AudioSource speaker;
+    public AudioClip leafesound;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -58,6 +62,9 @@ public class LeafDissolve : MonoBehaviour
         if (!isDissolving && standingTime >= maxStandingTime / 2)
         {
             isDissolving = true;
+
+            //audio
+            speaker.PlayOneShot(leafesound);
         }
     }
 
