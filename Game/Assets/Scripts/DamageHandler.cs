@@ -148,12 +148,8 @@ public class DamageHandler : MonoBehaviour
 		if (isDead) return;
         isDead = true;
 		
-<<<<<<< Updated upstream
 		TreeSpawner.treeCount = 0;
 		if (reason == "hole")
-=======
-		if(reason == "hole")
->>>>>>> Stashed changes
 		{
 			TreeSpawner.treeCount = 0;
 			SceneManager.LoadScene(2, LoadSceneMode.Single);
@@ -164,14 +160,10 @@ public class DamageHandler : MonoBehaviour
 			Debug.Log("Fell too much");
 			TreeSpawner.treeCount = 0;
 			SceneManager.LoadScene(3, LoadSceneMode.Single);
-<<<<<<< Updated upstream
 		} else if (reason == "Timer")
 		{
 			SceneManager.LoadScene(3,LoadSceneMode.Single);
-=======
-			//Destroy(gameObject);
->>>>>>> Stashed changes
 		}
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
 }
