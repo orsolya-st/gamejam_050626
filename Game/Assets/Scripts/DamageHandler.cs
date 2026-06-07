@@ -54,6 +54,7 @@ public class DamageHandler : MonoBehaviour
 		{
 			if (fallTime >= maxFallingTime)
 			{
+				Debug.Log("fallout --> die call");
 				Die("fallOut");
 			}
 			fallTime += Time.deltaTime;
@@ -142,21 +143,34 @@ public class DamageHandler : MonoBehaviour
 
 	public void Die(String reason)
 	{
+		Debug.Log("Die function triggered");
+		
 		if (isDead) return;
         isDead = true;
 		
+<<<<<<< Updated upstream
 		TreeSpawner.treeCount = 0;
 		if (reason == "hole")
+=======
+		if(reason == "hole")
+>>>>>>> Stashed changes
 		{
+			TreeSpawner.treeCount = 0;
 			SceneManager.LoadScene(2, LoadSceneMode.Single);
 			Debug.Log("Died from hole");
+			//Destroy(gameObject);
 		} else if (reason == "fallDamage" || reason == "fallOut")
 		{
 			Debug.Log("Fell too much");
+			TreeSpawner.treeCount = 0;
 			SceneManager.LoadScene(3, LoadSceneMode.Single);
+<<<<<<< Updated upstream
 		} else if (reason == "Timer")
 		{
 			SceneManager.LoadScene(3,LoadSceneMode.Single);
+=======
+			//Destroy(gameObject);
+>>>>>>> Stashed changes
 		}
         Destroy(gameObject);
     }
