@@ -31,6 +31,8 @@ public class DropletMovement : MonoBehaviour
     [SerializeField] private TrailRenderer tr;
     [SerializeField] private Animator animator;
     [SerializeField] private float fallingAnimationVelocityThreshold = 3f;
+    [SerializeField]
+    private AudioSource audioSource; // play when jumping
 
 
     void Start()
@@ -61,6 +63,7 @@ public class DropletMovement : MonoBehaviour
              Input.GetKeyDown(KeyCode.W))
              && !isDropping)
         {
+            audioSource.Play();
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
         }
 
