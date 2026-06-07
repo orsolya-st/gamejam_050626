@@ -10,7 +10,7 @@ public class StartScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.anyKey)
+        if (Input.anyKeyDown)
         {
             // Start the "coroutine" instead of switching scenes immediately
             StartCoroutine(PlaySoundAndLoad());
