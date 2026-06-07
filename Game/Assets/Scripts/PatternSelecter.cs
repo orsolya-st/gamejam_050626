@@ -31,8 +31,8 @@ public class PatternSelecter : MonoBehaviour
             transform.GetChild(transform.childCount - 1).gameObject.SetActive(true);
             spriteRenderer.sprite = endTreeSprite;
             // spriteRenderer.color = new Color32(255, 228, 225,255);
-            transform.localScale = new Vector3(1.05f, 1.05f, 1.05f);
-            transform.localPosition += new Vector3(0.27f,0.54f,0f);
+            // transform.localScale = new Vector3(1.05f, 1.05f, 1.05f);
+            transform.localPosition += new Vector3(-0.2f,-0.5f,0f);
             confine.size += new Vector2(0f, 38f);
             confiner2D.InvalidateBoundingShapeCache();
         }

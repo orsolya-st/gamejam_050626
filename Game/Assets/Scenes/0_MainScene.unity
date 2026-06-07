@@ -1246,10 +1246,10 @@ PrefabInstance:
     - target: {fileID: 5615831806268684012, guid: 63a81e9c39aed7249bdeb557c0054e6c, type: 3}
       propertyPath: endTreeSprite
       value: 
-      objectReference: {fileID: 7024218491085898663, guid: b814efef9b884f24c8d7e5c2fb610405, type: 3}
+      objectReference: {fileID: 6920063139214059855, guid: 6f973ca6f71800cdb9b6c3198055e4cf, type: 3}
     - target: {fileID: 5615831806268684012, guid: 63a81e9c39aed7249bdeb557c0054e6c, type: 3}
       propertyPath: lastTreeNumber
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6340050609640341239, guid: 63a81e9c39aed7249bdeb557c0054e6c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1322,7 +1322,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
