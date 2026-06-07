@@ -1249,7 +1249,7 @@ PrefabInstance:
       objectReference: {fileID: 6920063139214059855, guid: 6f973ca6f71800cdb9b6c3198055e4cf, type: 3}
     - target: {fileID: 5615831806268684012, guid: 63a81e9c39aed7249bdeb557c0054e6c, type: 3}
       propertyPath: lastTreeNumber
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6340050609640341239, guid: 63a81e9c39aed7249bdeb557c0054e6c, type: 3}
       propertyPath: m_LocalPosition.y
