@@ -4,8 +4,7 @@ using UnityEngine;
 public class PatternSelecter : MonoBehaviour
 
 {
-    [SerializeField]
-    private int lastTreeNumber = 8;
+    public int lastTreeNumber = 8;
     public SpriteRenderer spriteRenderer;
     public Sprite endTreeSprite;
     public BoxCollider2D confine;

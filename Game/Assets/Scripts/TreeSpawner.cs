@@ -9,11 +9,18 @@ public class TreeSpawner : MonoBehaviour
 
     public static int treeCount;
 
+    private int maxTrees;
 
-    
+
+    private void Start()
+    {
+        maxTrees = GameObject.Find("Tree").GetComponent<PatternSelecter>().lastTreeNumber;
+    }
+
+
     void Update()
     {
-        if (hasSpawned) return;
+        if (hasSpawned || treeCount >= maxTrees) return;
 
         Debug.Log("Player Y: " + player.position.y + " | Tree Y + 2: " + (transform.position.y + 2f));
 
