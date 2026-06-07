@@ -8,6 +8,9 @@ public class GameOverScript : MonoBehaviour
     public GameObject image;
     private float elapsed;
 
+    [SerializeField]
+    private float duration = 2.0f;
+
     void Start()
     {
         image.SetActive(false);
@@ -18,11 +21,11 @@ public class GameOverScript : MonoBehaviour
     void Update()
     {
         elapsed += Time.deltaTime;
-        if(elapsed >= 2.0f) { 
+        if(elapsed >= duration) { 
            image.SetActive(true);
             if (Input.anyKeyDown)
             {
-                SceneManager.LoadScene("0_Main scene");
+                SceneManager.LoadScene(0, LoadSceneMode.Single);
             }
 
         }

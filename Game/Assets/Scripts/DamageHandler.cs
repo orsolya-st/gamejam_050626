@@ -125,6 +125,7 @@ public class DamageHandler : MonoBehaviour
 
 	public void Die(String reason)
 	{
+		TreeSpawner.treeCount = 0;
 		if(reason == "hole")
 		{
 			SceneManager.LoadScene(2, LoadSceneMode.Single);
