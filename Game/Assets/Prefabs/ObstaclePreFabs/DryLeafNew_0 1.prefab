@@ -171,4 +171,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9a8039b5a5594b38924248d8b768f98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LeafDissolve
-  maxStandingTime: 2
+  maxStandingTime: 1

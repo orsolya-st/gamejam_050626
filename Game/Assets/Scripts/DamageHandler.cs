@@ -75,11 +75,12 @@ public class DamageHandler : MonoBehaviour
 	}
 
 	private void OnCollisionEnter2D(Collision2D other)
-{
-		if(other.collider.CompareTag("Finish")){
+	{
+		if(other.collider.CompareTag("Finish")){ //WIN THE GAME
+			TreeSpawner.treeCount = 0;
 			SceneManager.LoadScene(5, LoadSceneMode.Single);
 		}
-    float fallSpeed = lastYVelocity;        
+		float fallSpeed = lastYVelocity;        
     
     // Check if we hit hard enough
     if (fallSpeed < -threshold)
