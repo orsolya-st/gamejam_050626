@@ -127,16 +127,14 @@ public class DamageHandler : MonoBehaviour
 	{
 		if(reason == "hole")
 		{
-			SceneManager.LoadScene(3, LoadSceneMode.Single);
+			SceneManager.LoadScene(2, LoadSceneMode.Single);
 			Debug.Log("Died from hole");
-		} else if (reason == "fallDamage")
-		{
-			Debug.Log("Died from fall damage");
-		} else if (reason == "fallOut")
+		} else if (reason == "fallDamage" || reason == "fallOut")
 		{
 			Debug.Log("Fell too much");
+			SceneManager.LoadScene(3, LoadSceneMode.Single);
+			Destroy(gameObject);
+
 		}
-		
-        Destroy(gameObject);
 	}
 }
