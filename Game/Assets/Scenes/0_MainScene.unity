@@ -9710,6 +9710,10 @@ PrefabInstance:
       propertyPath: maxTreeCount
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2764455090306147063, guid: 63a81e9c39aed7249bdeb557c0054e6c, type: 3}
+      propertyPath: treeEndPrefab
+      value: 
+      objectReference: {fileID: 8851845362353968682, guid: 4f29bb632e04c17d191d1dc53420d97e, type: 3}
     - target: {fileID: 3683337692723927349, guid: 63a81e9c39aed7249bdeb557c0054e6c, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
