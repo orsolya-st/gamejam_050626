@@ -65,16 +65,6 @@ public class DropletMovement : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
         }
 
-        //Jump animation
-        
-        // if (rb.linearVelocityY < fallingAnimationVelocityThreshold && !isGrounded)
-        // {
-        //     animator.SetBool("Falling", true);
-        // } else
-        // {
-        //     animator.SetBool("Falling", false);
-        // }
-
         //Walk animation
         if (movement.x > 0) {
             animator.SetBool("WalkingRight", true);
@@ -125,7 +115,7 @@ public class DropletMovement : MonoBehaviour
         if (other.CompareTag("Hole"))
         {
             SceneManager.LoadScene(2, LoadSceneMode.Single);
-            Destroy(gameObject);
+            //Destroy(gameObject);
             Debug.Log("Fell in hole!");
         }
 
