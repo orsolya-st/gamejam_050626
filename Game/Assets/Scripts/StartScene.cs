@@ -7,25 +7,42 @@ public class StartScene : MonoBehaviour
     public AudioSource mySpeaker;
     public AudioClip jingle;
 
-    // Update is called once per frame
+    private float waitTimer = 10f; // 10-second countdown
+    private bool isReady = false;
+    private bool isLoading = false;
+
     void Update()
     {
-        if (Input.anyKeyDown)
+        // 1. Handle the countdown timer
+        if (!isReady)
         {
-            // Start the "coroutine" instead of switching scenes immediately
+            // Time.deltaTime is the time in seconds it took to complete the last frame
+            waitTimer -= Time.deltaTime; 
+
+            if (waitTimer <= 0f)
+            {
+                isReady = true;
+            }
+        }
+
+        // 2. Handle the player input once the timer hits 0
+        if (isReady && !isLoading && Input.anyKeyDown)
+        {
+            isLoading = true;
             StartCoroutine(PlaySoundAndLoad());
         }
     }
 
     IEnumerator PlaySoundAndLoad()
     {
-        // 1. Play the sound
-        mySpeaker.PlayOneShot(jingle);
+        if (mySpeaker != null && jingle != null)
+        {
+            mySpeaker.PlayOneShot(jingle);
+        }
 
-        // 2. Wait for the length of the sound clip (or a fixed time)
+        // Keep this short delay so the jingle has time to play before the scene cuts
         yield return new WaitForSeconds(0.4f); 
 
-        // 3. Now it is safe to load the scene
-        SceneManager.LoadScene(0, LoadSceneMode.Single);
+        SceneManager.LoadScene(0, LoadSceneMode.Single); 
     }
 }
