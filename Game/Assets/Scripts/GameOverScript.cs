@@ -18,6 +18,7 @@ public class GameOverScript : MonoBehaviour
     {
         image.SetActive(false);
         elapsed = 0.0f;
+  
     }
 
 
@@ -33,6 +34,7 @@ public class GameOverScript : MonoBehaviour
             if (Input.anyKeyDown)
             {
                 SceneManager.LoadScene(0, LoadSceneMode.Single);
+                TreeSpawner.treeCount = 0;
             }
 
         }
