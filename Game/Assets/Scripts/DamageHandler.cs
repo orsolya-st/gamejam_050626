@@ -24,10 +24,12 @@ public class DamageHandler : MonoBehaviour
     public AudioClip fallsound;
 
     public AudioClip splashSound;
+	private bool isDead = false;
 
 
     private void Awake()
 	{
+		isDead = false;
 		rb = GetComponent<Rigidbody2D>();
 		animator = GetComponent<Animator>();
 	}
@@ -39,6 +41,8 @@ public class DamageHandler : MonoBehaviour
 
 	private void FixedUpdate()
 	{
+		if (isDead) return;
+
 		float currentVelocity = rb.linearVelocityY;
 		if (lastYVelocity >= 0 && currentVelocity < 0)
 		{
@@ -76,6 +80,8 @@ public class DamageHandler : MonoBehaviour
 
 	private void OnCollisionEnter2D(Collision2D other)
 	{
+		if (isDead) return;
+		
 		if(other.collider.CompareTag("Finish")){ //WIN THE GAME
 			TreeSpawner.treeCount = 0;
 			SceneManager.LoadScene(5, LoadSceneMode.Single);
@@ -104,6 +110,8 @@ public class DamageHandler : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D other)
 	{
+		if (isDead) return;
+		
 		if (other.CompareTag("Minidrop"))
 		{
 			UpdateHealth(health + 0.2f);
@@ -116,6 +124,8 @@ public class DamageHandler : MonoBehaviour
 
 	public void UpdateHealth(float health)
 	{	
+		if (isDead) return;
+		
 		this.health = health;
 		if (health > maxHealth) this.health = maxHealth;
 
@@ -132,6 +142,9 @@ public class DamageHandler : MonoBehaviour
 
 	public void Die(String reason)
 	{
+		if (isDead) return;
+        isDead = true;
+		
 		TreeSpawner.treeCount = 0;
 		if(reason == "hole")
 		{
