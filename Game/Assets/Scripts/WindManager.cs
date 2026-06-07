@@ -15,6 +15,8 @@ public class WindManager : MonoBehaviour
 
     public float CurrentWindForce { get; private set; }
 
+    private bool windStarted = false;
+
     void Awake()
     {
         Instance = this;
@@ -26,8 +28,15 @@ public class WindManager : MonoBehaviour
         {
             effect.SetActive(false);
         }
+    }
 
-        StartCoroutine(WindRoutine());
+    void Update()
+    {
+        if (!windStarted && Input.anyKeyDown)
+        {
+            windStarted = true;
+            StartCoroutine(WindRoutine());
+        }
     }
 
     IEnumerator WindRoutine()
