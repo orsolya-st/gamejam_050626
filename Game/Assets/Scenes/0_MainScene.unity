@@ -1829,7 +1829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Timer
   timeText: {fileID: 2009337314}
-  timeRemaining: 10
+  timeRemaining: 89
   targetObject: {fileID: 118794739}
   damageHandler: {fileID: 0}
 --- !u!114 &2112957321
