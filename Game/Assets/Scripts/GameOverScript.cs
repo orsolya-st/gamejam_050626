@@ -33,7 +33,7 @@ public class GameOverScript : MonoBehaviour
             }
             if (Input.anyKeyDown)
             {
-                SceneManager.LoadScene(0, LoadSceneMode.Single);
+                SceneManager.LoadScene(1, LoadSceneMode.Single);
                 TreeSpawner.treeCount = 0;
             }
 

@@ -43,6 +43,6 @@ public class StartScene : MonoBehaviour
         // Keep this short delay so the jingle has time to play before the scene cuts
         yield return new WaitForSeconds(0.4f); 
 
-        SceneManager.LoadScene(0, LoadSceneMode.Single); 
+        SceneManager.LoadScene(1, LoadSceneMode.Single); 
     }
 }

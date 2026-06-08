@@ -1,0 +1,455 @@
+fileFormatVersion: 2
+guid: 7d66e25763349004c91e77536dc554c7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1086537220809786255
+    second: happy sprites 1_0
+  - first:
+      213: 1983042793291953854
+    second: happy sprites 1_1
+  - first:
+      213: 4874766260291366497
+    second: happy sprites 1_2
+  - first:
+      213: 4147724846500442000
+    second: happy sprites 1_3
+  - first:
+      213: -5717819256448542204
+    second: happy sprites 1_4
+  - first:
+      213: 6245520931979248736
+    second: happy sprites 1_5
+  - first:
+      213: 8649685097651119488
+    second: happy sprites 1_6
+  - first:
+      213: -4182317825195800749
+    second: happy sprites 1_7
+  - first:
+      213: 5469742000311824126
+    second: happy sprites 1_8
+  - first:
+      213: -1424955027028984767
+    second: happy sprites 1_9
+  - first:
+      213: -8484065450144609513
+    second: happy sprites 1_10
+  - first:
+      213: -3857218941267467499
+    second: happy sprites 1_11
+  - first:
+      213: -6929045367648059118
+    second: happy sprites 1_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: happy sprites 1_0
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 1633
+        width: 621
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17c74668728dbe0f0800000000000000
+      internalID: -1086537220809786255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happy sprites 1_1
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 1671
+        width: 568
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb6b094f9ee258b10800000000000000
+      internalID: 1983042793291953854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happy sprites 1_2
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 1577
+        width: 579
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16ee9bb0616a6a340800000000000000
+      internalID: 4874766260291366497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happy sprites 1_3
+      rect:
+        serializedVersion: 2
+        x: 2067
+        y: 1454
+        width: 512
+        height: 561
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09f68b5b5cdaf8930800000000000000
+      internalID: 4147724846500442000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happy sprites 1_4
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 1049
+        width: 496
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40a1f793ea936a0b0800000000000000
+      internalID: -5717819256448542204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happy sprites 1_5
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 1066
+        width: 527
+        height: 439
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 064c3eb823c8ca650800000000000000
+      internalID: 6245520931979248736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happy sprites 1_6
+      rect:
+        serializedVersion: 2
+        x: 1391
+        y: 1045
+        width: 578
+        height: 377
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0852c70b4cad90870800000000000000
+      internalID: 8649685097651119488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happy sprites 1_7
+      rect:
+        serializedVersion: 2
+        x: 2092
+        y: 1018
+        width: 567
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3578b6bc81c65f5c0800000000000000
+      internalID: -4182317825195800749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happy sprites 1_8
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 601
+        width: 574
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efeee9d8e5d68eb40800000000000000
+      internalID: 5469742000311824126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happy sprites 1_9
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 521
+        width: 518
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14cb701e3fa893ce0800000000000000
+      internalID: -1424955027028984767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happy sprites 1_10
+      rect:
+        serializedVersion: 2
+        x: 1562
+        y: 464
+        width: 484
+        height: 439
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71b47f07c6b824a80800000000000000
+      internalID: -8484065450144609513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happy sprites 1_11
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 349
+        width: 486
+        height: 497
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51328d03fc7687ac0800000000000000
+      internalID: -3857218941267467499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happy sprites 1_12
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 51
+        width: 535
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21185c423f517df90800000000000000
+      internalID: -6929045367648059118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      happy sprites 1_0: -1086537220809786255
+      happy sprites 1_1: 1983042793291953854
+      happy sprites 1_10: -8484065450144609513
+      happy sprites 1_11: -3857218941267467499
+      happy sprites 1_12: -6929045367648059118
+      happy sprites 1_2: 4874766260291366497
+      happy sprites 1_3: 4147724846500442000
+      happy sprites 1_4: -5717819256448542204
+      happy sprites 1_5: 6245520931979248736
+      happy sprites 1_6: 8649685097651119488
+      happy sprites 1_7: -4182317825195800749
+      happy sprites 1_8: 5469742000311824126
+      happy sprites 1_9: -1424955027028984767
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
